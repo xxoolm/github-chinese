@@ -349,6 +349,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Code search results": "代码搜索结果",
         "Enterprises": "企业版",
         "Blocked users": "黑名单",
+        "New conversation · GitHub Copilot": "新聊天 · GitHub Copilot",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -615,6 +616,12 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                 "New project": "新建项目",
                 "This organization": "本组织", // 组织
                 "New team": "新建团队", // 组织
+        // 右上角 Copilot 下拉菜单
+            "Chat with Copilot": "与 Copilot 聊天",
+            "Open Copilot…": "打开 Copilot…",
+                "New conversation in": "新聊天",
+                    "Immersive": "沉浸式",
+                "Open with": "打开于",
 
         // 右上角个人图标下拉菜单
             "Account switcher": "账户切换",
@@ -1498,6 +1505,10 @@ I18N["zh-CN"]["orgs-public"] = { // 组织公共部分
 
 I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组织）
     "static": { // 静态翻译
+        //顶部 GPT 聊天窗口
+        "Ask Copilot": "询问 Copilot",
+        "Send": "发送",
+        "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
         // 新手帮助
         "Learn Git and GitHub without any code!": "了解 Git 和 GitHub 无需任何代码！",
         "Using the Hello World guide, you’ll create a repository, start a branch,": "使用 Hello World 指南，您将创建一个仓库，开始一个分支，",
@@ -3337,9 +3348,15 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                 // "GitHub Copilot": "",
                     "Your AI pair programmer": "您的人工智能助理程序员",
                     "Your AI powered pair programmer": "您的人工智能助理程序员",
-                    "Enable GitHub Copilot": "启用 GitHub Copilot",
-                    "GitHub Copilot suggests code and entire functions in real-time, right from your editor": "GitHub Copilot 会在编辑器中实时建议代码和整个函数。",
-                    "GitHub Copilot uses the GPT-3.5 Turbo model to suggest code and entire functions in real-time, right from your editor": "GitHub Copilot 使用 GPT-3.5 Turbo 模型实时在您的编辑器中提供代码和整个函数建议",
+                    "Upgrade to Copilot Pro": "升级至 Pro",
+                    "Active subscription": "已激活订阅",
+                        "Copilot Free": "免费版",
+                    "You can upgrade to Copilot Pro at any time. Check out this": "您可以随时升级到 Copilot Pro。详情请查看",
+                    "documentation": "文档",
+                    "for more details.": "。",
+                    //"Enable GitHub Copilot": "启用 GitHub Copilot",
+                    //"GitHub Copilot suggests code and entire functions in real-time, right from your editor": "GitHub Copilot 会在编辑器中实时建议代码和整个函数。",
+                    //"GitHub Copilot uses the GPT-3.5 Turbo model to suggest code and entire functions in real-time, right from your editor": "GitHub Copilot 使用 GPT-3.5 Turbo 模型实时在您的编辑器中提供代码和整个函数建议",
 
                      // 组织设置
                     "Learn more about Copilot Business": "了解更多关于 GitHub Copilot 商业版的信息",
@@ -4570,7 +4587,41 @@ I18N["zh-CN"]["settings/copilot"] = { // 设置 - GitHub Copilot
             "Cancelling...": "撤销中...",
             "Buy Copilot Business": "购买 GitHub Copilot 企业版",
             "Owner": "所有者",
-
+        // 新界面
+            "Copilot Free is active for your account": "您的账户已启用 Copilot 免费版",
+                "Responses are capped at 2,000 code completions and 50 chat messages per month.": "回复上限为每月 2,000 次代码完成和 50 条聊天信息。",
+            "Get unlimited usage with Copilot Pro": "通过 Copilot Pro 无限制使用",
+                "Unlimited messages and interactions": "信息和互动无限制",
+                "Access to the latest models": "访问最新模型",
+                "Customize conversations to your private codebase and extensions": "为您的私人代码库和扩展定制会话",
+                "Start a free trial": "免费试用",
+            
+            "Copilot policies": "Copilot 规则",
+                "Copilot in github.com": "github.com 中的 Copilot",
+                    "You can use Copilot Chat in github.com, but not preview features.": "您可以在 github.com 中使用 Copilot Chat，但无预览功能。",
+                    "Learn more about Copilot in github.com": "了解更多",
+                "Suggestions matching public code (duplication detection filter)": "建议匹配公共代码（重复检测过滤器）",
+                    "Copilot can allow or block suggestions matching public code. Learn more about": "Copilot 可允许或阻止与公共代码匹配的建议。了解更多关于",
+                    "code suggestions": "代码建议",
+                    "Allowed": "允许",
+                        "GitHub Copilot will show suggestions matching public code.": "GitHub Copilot 将显示与公共代码匹配的建议。",
+                    "Blocked": "阻止",
+                        "GitHub Copilot won't show suggestions matching public code.": "GitHub Copilot 不会显示与公共代码匹配的建议。",
+                "Allow GitHub to use my code snippets from the code editor for product improvements *": "允许 GitHub 将代码编辑器中的代码片段用于产品改进 *",
+                    "Allow GitHub, its affiliates and third parties to use my code snippets to research and improve GitHub Copilot suggestions, related models and product features. More information in": "允许 GitHub、其附属机构和第三方使用我的代码片段来研究和改进 GitHub Copilot 建议、相关模型和产品功能。更多",
+                    "About GitHub Copilot privacy.": "关于 GitHub Copilot 隐私的信息。",
+                "Anthropic Claude 3.5 Sonnet in Copilot": "Claude 3.5 中的 Copilot", // 简化部分名称
+                    "You can use the latest Claude 3.5 Sonnet model.": "您可以使用最新 Claude 3.5 Sonnet 模型。",
+                    "Learn more about how GitHub Copilot serves Claude 3.5 Sonnet.": "进一步了解 GitHub Copilot 如何为 Claude 3.5 Sonnet 服务。",
+                    "Select an option": "选择",
+                        "You will have access to the feature": "您将能够访问此功能",
+                        "You won’t have access to the feature": "您将不能访问此功能",
+                "Dashboard entry point": "仪表板入口",
+                    "Allows instant chatting when landing on GitHub.com": "允许登陆 GitHub.com 时即时聊天",
+            
+            "For more information about the data your organization receives regarding your use of GitHub Copilot, please review": "如需了解贵机构在使用 GitHub Copilot 时会收到哪些数据，请查看",
+                "GitHub's Privacy Statement": "GitHub 的《隐私声明》",
+            "It can take up to 30 minutes for the changes to take effect. Restart your code editor for the changes to take effect immediately.": "更改可能需要 30 分钟才能生效。重新启动代码编辑器，更改会立即生效。",
     },
     "regexp": [ // 正则翻译
         [/Outside collaborator on (\d+) repositor(y|ies)/, "$1 个仓库的外部协作者"],
@@ -17844,6 +17895,10 @@ I18N["zh-CN"]["trending"] = { // 热门页面
             "Filter spoken languages": "筛选母语",
             "Clear spoken language": "清除母语",
             "Any": "任何",
+            // 弹窗
+            "Filter by spoken language": "使用母语筛选",
+                "Select your preferred spoken language in order to see matching trending results.": "选择您喜欢的母语以查看匹配的趋势结果。",
+                "Got it!": "确定",
         "Language:": "语言：",
             "Select a language": "选择语言：",
             "Filter languages": "筛选语言",
@@ -22389,9 +22444,96 @@ I18N["zh-CN"]["repository/actions/metrics/performance"] = {
 
 I18N["zh-CN"]["copilot"] = {
     "static": {
-        "Accelerate your development speed with Copilot": "使用 Copilot 加快开发速度",
+        // 错误
+            "Conversation failed to load": "加载失败",
+                "Reload the page": "重载页面。",
+                "to try again.": " ",
+        // 左侧边栏
+            "Open sidebar": "打开侧边栏",
+            "Close sidebar": "关闭侧边栏",
+            "New conversation": "新聊天",
+
+            // 时间
+                "Today": "今天",
+
+            // 无对话
+            "No conversations yet": "还没有对话",
+            "Ask Copilot anything on the right to start your first conversation.": "向 Copilot 提出任何问题，开始第一次对话。",
+
+            // 某条对话
+                "Manage conversation": "管理",
+                    "Rename": "重命名",
+                        "Rename conversation": "重命名对话",
+                    // 删除
+                        "Delete conversation": "删除对话",
+                        "Are you sure you want to delete this conversation? This action cannot be undone.": "您确定要删除这段对话吗？此操作无法撤销。",
+
+        // 中间
+            // 模型选择窗
+                "Models": "模型",
+                // Claude 3.5
+                    "Enable Claude 3.5 Sonnet": "启用 Claude 3.5 Sonnet",
+                        "Enable access to the latest Claude 3.5 Sonnet model from Anthropic.": "允许访问 Anthropic 最新的 Claude 3.5 Sonnet 模型。",
+                        "Learn more about how GitHub Copilot serves Claude 3.5 Sonnet": "进一步了解 GitHub Copilot 如何为 Claude 3.5 Sonnet 服务。",
+            "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
+
+            "Copy code": "复制代码",
+            "Copied!": "复制成功！",
+
+            "Good response": "点赞",
+            "Bad response": "点踩",
+
+            "Scroll to bottom": "滚动至底部",
+        
+        // 右侧
+            "Open menu": "菜单",
+                // 反馈
+                    "Rate your experience": "反馈",
+                        // 四个表情
+                            "Love it": "优",
+                            "It’s ok": "良",
+                            "Not great": "中",
+                            "Hate it": "差",
+                        
+                        "Tell us what you liked or what could be better": "告诉我们您喜欢什么或可以改进的地方",
+                        
+                        "Please don’t include sensitive, confidential, or personal data. Your anonymous feedback helps us improve our services in line with our": "请不要包含敏感、机密或个人数据。您的匿名反馈有助于我们改进服务，根据",
+                        "Privacy Policy": "隐私政策",
+                        "Send": "发送",
+        // 聊天窗口
+        "Install Copilot in your favorite code editor": "安装 Copilot 到您的代码编辑器",
+            "Copilot is available for a multitude of editors to fit your needs": "Copilot 可用于多种编辑器，以满足您的需求",
+            "Dismiss banner": "关闭",
+
+            "Remove topic": "移除主题",
+            "Remove": "移除",
+            "Attachments options": "附件选项",
+                "Remove attachments": "移除附件",
+
+            "Ask Copilot": "询问 Copilot",
+            "Add attachment": "添加附件",
+                "Files and symbols…": "文件和符号…",
+                    "First attach a repository": "请先附加仓库",
+                    "Attach files and symbols": "附加文件和符号",
+                        "Choose which files and symbols you want to chat about. Use fewer references for more accurate responses.": "选择您想要讨论的文件和符号。使用较少的参考资料即可获得更准确的回复。",
+                        "Search files and symbols": "搜索文件和符号",
+                        "Current attachments": "当前附件",
+                        "Symbols": "符号",
+                "Repository…": "仓库…",
+                    "Attach a repository": "附加仓库",
+                        "Search repositories": "搜索仓库",
+                        "Fetching repositories…": "正在获取仓库",
+                    "Close": "关闭",
+                "Extension…": "扩展…",
+                "Extension": "扩展",
+                    "Extensions": "扩展",
+                        "Chat with your favorite tools and services": "使用您最喜欢的工具和服务聊天",
+                        "Browse the marketplace to find extensions for the tools and services you rely on": "浏览市场以查找您所依赖的工具和服务的扩展",
+                        "Browse marketplace": "前往市场",
+            "Send now": "发送",
 
         // 了解世界领先的人工智能开发工具的所有优势。
+        "Accelerate your development speed with Copilot": "使用 Copilot 加快开发速度",
         "Discover all the": "了解世界领先的人工智能开发工具的所有",
             "benefits": "优势",
             "of the world’s leading AI developer tool.": "。",
