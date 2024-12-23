@@ -4659,7 +4659,8 @@ I18N["zh-CN"]["settings/copilot"] = { // 设置 - GitHub Copilot
             "Cancelling...": "撤销中...",
             "Buy Copilot Business": "购买 GitHub Copilot 企业版",
             "Owner": "所有者",
-        // 新界面
+
+        // 免费版
             "You are using Copilot for free": "您正在使用 Copilot 免费版",
                 "Responses are limited to 2,000 code completions and 50 chat messages per month.": "回复上限为每月 2,000 次代码完成和 50 条聊天信息。",
             //"Copilot Free is active for your account": "您的账户已启用 Copilot 免费版",
@@ -4669,12 +4670,12 @@ I18N["zh-CN"]["settings/copilot"] = { // 设置 - GitHub Copilot
                 "Access to the latest models": "访问最新模型",
                 "Customize conversations to your private codebase and extensions": "为您的私人代码库和扩展定制会话",
                 "Start a free trial": "免费试用",
-            
+
             "Copilot policies": "Copilot 规则",
-                "Copilot in github.com": "github.com 中的 Copilot",
-                    "You can use Copilot Chat in github.com, but not preview features.": "您可以在 github.com 中使用 Copilot 聊天，但无预览功能。",
+                "Copilot in github.com": "在 github.com 中使用 Copilot",
+                    "You can use Copilot Chat in github.com, but not preview features.": "您可以在 github.com 中使用 Copilot Chat，但无预览功能。",
                     "Learn more about Copilot in github.com": "了解更多",
-                "Suggestions matching public code (duplication detection filter)": "建议匹配公共代码（重复检测过滤器）",
+                "Suggestions matching public code (duplication detection filter)": "公共代码匹配的建议（重复检测过滤器）",
                     "Copilot can allow or block suggestions matching public code. Learn more about": "Copilot 可允许或阻止与公共代码匹配的建议。了解更多关于",
                     "code suggestions": "代码建议",
                     "Allowed": "允许",
@@ -4688,7 +4689,12 @@ I18N["zh-CN"]["settings/copilot"] = { // 设置 - GitHub Copilot
                     "About GitHub Copilot privacy.": "关于 GitHub Copilot 隐私的信息。",
                 "Allow GitHub to use my data for AI model training": "允许 GitHub 将数据用于训练 AI 模型",
                     "Allow GitHub, its affiliates and third parties to use my data, including Prompts, Suggestions, and Code Snippets, for AI model training. More information in the": "允许GitHub、其关联公司和第三方使用我的数据，包括提示、建议和代码片段，以训练 AI 模型。更多信息请查看",
-                "Copilot access to Bing": "访问必应", // 下面还有词条未添加
+                "Copilot access to Bing": "访问必应",
+                    "Copilot can answer questions about new trends and give improved answers.": "Copilot 可以回答有关新趋势的问题，并给出改进的答案。",
+                    "See Microsoft Privacy Statement": "请参阅微软隐私声明 ",
+
+                    "GitHub Copilot will answer questions about new trends and give improved answers": "GitHub Copilot 将回答有关新趋势的问题并给出改进的答案",
+                    "GitHub Copilot won't answer questions about new trends and give improved answers": "GitHub Copilot 将不会回答有关新趋势的问题并给出改进的答案",
                 "Anthropic Claude 3.5 Sonnet in Copilot": "Claude 3.5 模型", // 简化部分名称
                     "You can use the latest Claude 3.5 Sonnet model.": "您可以使用最新 Claude 3.5 Sonnet 模型。",
                     "Learn more about how GitHub Copilot serves Claude 3.5 Sonnet.": "进一步了解 GitHub Copilot 如何为 Claude 3.5 Sonnet 服务。",
@@ -4697,10 +4703,37 @@ I18N["zh-CN"]["settings/copilot"] = { // 设置 - GitHub Copilot
                         "You won’t have access to the feature": "您将不能访问此功能",
                 "Dashboard entry point": "仪表板入口",
                     "Allows instant chatting when landing on GitHub.com": "允许登陆 GitHub.com 时即时聊天",
-            
+
             "For more information about the data your organization receives regarding your use of GitHub Copilot, please review": "如需了解贵机构在使用 GitHub Copilot 时会收到哪些数据，请查看",
                 "GitHub's Privacy Statement": "GitHub 的《隐私声明》",
             "It can take up to 30 minutes for the changes to take effect. Restart your code editor for the changes to take effect immediately.": "更改可能需要 30 分钟才能生效。重新启动代码编辑器，更改会立即生效。",
+
+        // 专业版
+            // 顶部提醒
+                "It appears you are not eligible to sign up to GitHub Copilot for free": "您似乎没有资格免费注册 GitHub Copilot",
+            "Your GitHub Copilot setup is incomplete. Select your preferences below to start using GitHub Copilot.": "您的 GitHub Copilot 设置不完整。请在下面选择您的偏好，开始使用 GitHub Copilot。",
+
+            "GitHub Copilot Pro is active for your account": "您的 GitHub Copilot Pro 帐户已激活",
+                "You currently have an active": "您当前拥有有效的",
+                "Copilot Pro subscription": "GitHub Copilot Pro 订阅",
+                "Get started by installing the extension in your preferred IDE.": "首先在您首选的 IDE 中安装扩展。",
+                "Copilot in your IDE": "集成在 IDE",
+                "Copilot in the CLI": "在终端中使用",
+                "Chat in GitHub Mobile": "在 GitHub Mobile 中使用",
+                "More features": "更多功能",
+
+            // "Copilot policies": "Copilot 规则",
+                // "Copilot in github.com": "在 github.com 中使用 Copilot",
+                    "You can use Copilot Chat in github.com, Copilot for pull requests, and all of the preview features.": "您可以在 github.com 中使用 Copilot Chat，也可以使用 Copilot 拉取请求和所有预览功能。",
+                // "Copilot in the CLI": "在终端中使用",
+                    "You can use": "您可以",
+                    "GitHub Copilot for assistance in terminal": "GitHub Copilot 终端辅助工具",
+                "Copilot Chat in the IDE": "在 IDE 中使用 Copilot Chat",
+                    "GitHub Copilot Chat in the IDE": "在 IDE 中使用 Copilot Chat",
+                    "to explain a piece of code, propose bug fixes, or generate unit tests in a chat interface from your editor.": "在编辑器的聊天界面上解释代码、提出错误修复建议或生成单元测试。",
+                "Copilot Chat in GitHub Mobile": "在 GitHub Mobile 中使用 Copilot Chat",
+                    "personalized to a codebase.": "，个性化代码。",
+
     },
     "regexp": [ // 正则翻译
         [/Outside collaborator on (\d+) repositor(y|ies)/, "$1 个仓库的外部协作者"],
