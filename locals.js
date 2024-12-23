@@ -620,6 +620,7 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                 "New project": "新建项目",
                 "This organization": "本组织", // 组织
                 "New team": "新建团队", // 组织
+
         // 右上角 Copilot 下拉菜单
             "Chat with Copilot": "与 Copilot 聊天",
             "Open Copilot…": "打开 Copilot…",
@@ -1227,7 +1228,7 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
             "Tibetan": "藏文",
             "Vietnamese": "越南文",
             "Zhuang, Chuang": "壮文", // 存疑
-        
+
         // Copilot 窗口
             // 顶部
             "All repositories": "所有仓库",
@@ -1283,9 +1284,9 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
                 "It’s ok": "良",
                 "Not great": "中",
                 "Hate it": "差",
-            
+
             "Tell us what you liked or what could be better": "告诉我们您喜欢什么或可以改进的地方",
-            
+
             "Please don’t include sensitive, confidential, or personal data. Your anonymous feedback helps us improve our services in line with our": "请不要包含敏感、机密或个人数据。您的匿名反馈有助于我们改进服务，根据",
             "Privacy Policy": "隐私政策",
             "Send": "发送",
@@ -2866,12 +2867,14 @@ I18N["zh-CN"]["orgs-settings-menu"] = { // 组织设置 公共部分
 
             "Security": "安全",
             "Authentication security": "身份验证安全",
-            "Code security and analysis": "代码安全性与分析",
+            "Deploy keys": "部署密钥",
+            "Code security": "代码安全性",
+            "Compliance": "承诺",
             "Verified and approved domains": "经验证和批准的域名",
             "Secrets and variables": "机密和变量",
 
             "Third-party Access": "第三方访问",
-            "OAuth application policy": "OAuth 应用策略",
+            "OAuth app policy": "OAuth 应用策略",
             "GitHub Apps": "GitHub 应用",
             "Personal access tokens": "个人访问令牌",
                 "Active tokens": "活跃的令牌",
@@ -5635,11 +5638,13 @@ I18N["zh-CN"]["settings/apps"] = { // 设置 - 开发者设置/GitHub 应用
                 "Repository ruleset": "仓库规则集",
                     "Repository ruleset created, deleted or edited.": "仓库规则集的创建、删除或编辑。",
                 "Security and analysis": "安全和分析",
-                    "Code security and analysis features enabled or disabled for a repository.": "启用或禁用仓库的代码安全和分析功能。",
+                    "Code security features enabled or disabled for a repository.": "启用或禁用仓库的代码安全功能。",
                 "Secret scanning alert": "机密扫描警报",
-                    "Secrets scanning alert created, resolved, reopened, or validated": "机密扫描警报的创建、解决、重新打开或验证。",
+                    "Secrets scanning alert created, resolved, reopened, validated, or publicly leaked.": "机密扫描警报的创建、解决、重新打开、验证或公开泄露。",
                 "Secret scanning alert location": "机密扫描警报位置",
-                    "Secrets scanning alert location created": "机密扫描警报位置的创建。",
+                    "Secrets scanning alert location created.": "机密扫描警报位置的创建。",
+                "Secret scanning scans": "机密扫描",
+                    "Secrets scanning scan completed.": "机密扫描已完成",
                 // 星标
                     "A star is created or deleted from a repository.": "星标或取消仓库星标。",
                 //"状态": "",
@@ -9034,7 +9039,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
         [/(\d+) changes? requested/, "$1 项更改请求"],
         [/This pull request closes issue (#\d+)./, "该拉取请求将关闭议题 $1。"], // 死活不翻译
         [/([\d,]+) additions, ([\d,]+) deletions not shown because the diff is too large. Please use a local Git client to view these changes./, "$1 处增加，$2 处删除未显示，因为差异太大。请使用本地 Git 客户端查看这些更改。"],
-        
+
         // 状态
         [/branch (\d+) times, most recently from/, "分支 $1 次，最近一次从"],
         [/pushed a commit to ([^ ]+) that referenced this pull request/, " 向 $1 推送一次提交，其中引用了此拉取请求"],
@@ -9763,7 +9768,7 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
                 "Show hidden characters": "显示隐藏字符",
                 "Code view is read-only.": "代码视图只读。",
                     "Switch to the editor.": "切换到编辑器。",
-                
+
             // 代码视图底部
                 "View remainder of file in raw view": "以原码视图查看文件剩余部分",
 
@@ -9824,7 +9829,7 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
                 "Press": "按",
                 "again to open the browser's find menu": "打开浏览器的查找菜单",
                 "Search this file": "搜索此文件",
-            
+
         // 中间栏 顶部 权限信息
         "the": "为：", // 上半句走正则
 
@@ -10550,6 +10555,7 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
                     "schedule": "日程",
                     "watch": "关注",
                     "workflow_dispatch": "工作流程调度",
+                    "repository_dispatch": "仓库调度",
                     "dynamic": "动态",
             // 状态
                 "Filter by Status": "按状态筛选",
@@ -10587,9 +10593,11 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
                 // 顶部提醒
                     "Workflow run deleted successfully.": "工作流程运行删除成功。",
 
-            // // 筛选结果
-            // "all workflow runs": "所有工作流程运行",
-            // "or try different filters.": "或尝试不同的筛选器。",
+            // 筛选结果
+                "No results matched your search.": "没有与您的搜索匹配的结果。",
+                "You could search": "您可以搜索",
+                "all workflow runs": "所有工作流程运行",
+                "or try different filters.": "或尝试不同的筛选器。",
 
             // 列表区域
                 // 工作流程运行状态
@@ -10650,9 +10658,6 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
                 "debug logging": "调试日志",
 
             "This workflow has no runs yet.": "此工作流程尚未运行。",
-
-            "No results matched your search.": "没有与您的搜索匹配的结果。",
-            "You could search": "您可以搜索",
 
         // 缓存 /<user-name>/<repo-name>/actions/caches
             "Showing caches from all workflows.": "显示所有工作流程的缓存。",
@@ -10745,6 +10750,7 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
             "Triggered via schedule": "通过计划表触发",
             "Triggered via dynamic": "通过动态触发",
             "Triggered via GitHub Pages": "通过 GitHub 页面触发",
+            "Triggered via repository dispatch": "通过仓库调度触发",
             "Re-run triggered": "重新触发",
             "Manually triggered": "手动触发",
 
@@ -11178,7 +11184,7 @@ I18N["zh-CN"]["repository/new"] = { // 仓库 - 新建/编辑/上传/删除文�
 
             // 编辑 LICENSE 许可证文件
                 "Choose a license template": "选择许可证模板",
-            
+
             // 编辑 议题表单模板文件 .github/ISSUE_TEMPLATE/xxxx.yml
                 // 顶部提示
                 "Looks like this file is an issue template. Need help?": "此文件是一个议题模板。需要帮助？",
@@ -14791,6 +14797,9 @@ I18N["zh-CN"]["repository/settings/hooks"] = { // 仓库设置 - Web 钩子 /<us
             "We will also send events from this repository to your": "我们还将把这个仓库的事件发送到您的", // 组织仓库
             "organization webhooks": "组织 Web 钩子", // 组织仓库
 
+            "This hook has never been triggered.": "此钩子从未被触发过。",
+            "Last delivery was successful.": "上次触发成功。",
+
             // 删除对话框
                 "Delete webhook?": "删除 Web 钩子？",
                 "This action cannot be undone. Future events will no longer be delivered to this webhook": "此操作无法撤消。未来的事件将不再传递到此 Web 钩子",
@@ -14809,6 +14818,8 @@ I18N["zh-CN"]["repository/settings/hooks"] = { // 仓库设置 - Web 钩子 /<us
             "Content type": "内容类型",
             "Secret": "机密",
                 "Leave blank to remove secret": "留空以删除机密",
+            "There is currently a secret configured for this webhook. If you've lost or forgotten this secret, you can change it, but be aware that any integrations using this secret will need to be updated.": "目前 Web 钩子已配置了一个机密。如果您丢失或忘记了这个机密，可以更改它，但请注意，任何使用此机密的集成将需要更新",
+            "Change secret": "修改机密",
 
             "SSL verification": "SSL 验证",
             "By default, we verify SSL certificates when delivering payloads.": "默认情况下，我们在交付有效负载时验证 SSL 证书。",
@@ -14927,11 +14938,13 @@ I18N["zh-CN"]["repository/settings/hooks"] = { // 仓库设置 - Web 钩子 /<us
                     "Repository vulnerability alerts": "仓库漏洞警报",
                         "Dependabot alert (aka dependency vulnerability alert) created, resolved, or dismissed on a repository.": "Dependabot 警报（又名依赖漏洞警报）在仓库上的创建、解决或解除。",
                     "Secret scanning alert locations": "机密扫描警报位置",
-                        "Secrets scanning alert location created": "机密扫描警报位置的创建。",
+                        "Secrets scanning alert location created.": "机密扫描警报位置的创建。",
                     "Secret scanning alerts": "机密扫描警报",
-                        "Secrets scanning alert created, resolved, reopened, or validated": "机密扫描警报的创建、解决、重新打开或验证。",
+                        "Secrets scanning alert created, resolved, reopened, validated, or publicly leaked.": "机密扫描警报的创建、解决、重新打开、验证或公开泄露。",
                     "Security and analyses": "安全和分析",
-                        "Code security and analysis features enabled or disabled for a repository.": "启用或禁用仓库的代码安全和分析功能。",
+                        "Code security features enabled or disabled for a repository.": "启用或禁用仓库的代码安全功能。",
+                    "Secret scanning scans": "机密扫描",
+                        "Secrets scanning scan completed.": "机密扫描已完成",
                     // "": "星标",
                         "A star is created or deleted from a repository.": "星标或取消仓库星标。",
                     "Statuses": "状态",
@@ -15530,7 +15543,7 @@ I18N["zh-CN"]["repository/settings/security_analysis"] = { // 仓库设置 - 代
                         "limitations of autofix code suggestions": "自动修复代码建议限制的信息",
                         "On": "开",
                         "Off": "关",
-                    
+
                     "Copilot Autofix for third-party tools": "适用于第三方工具的 Copilot 自动修复",
                         "Suggest fixes for third-party alerts using AI. Ensure that these tools are properly configured or that an analysis is uploaded for this feature to work. Learn more about the": "使用人工智能对第三方警报提出修复建议。确保这些工具已正确配置或已上传分析，以便此功能正常工作。了解",
                         "limitations of autofix code suggestions for third party tools": "第三方工具自动修复代码建议局限性",
@@ -18588,7 +18601,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
                 "Add webhooks for your app to notify you when specified events are triggered.": "为您的应用程序添加 Web 钩子，以便在触发指定事件时通知您。",
             "Submit your tool for review": "提交您的工具以供审核",
                 "Share your app or GitHub Action with millions of developers.": "与数百万开发者分享您的应用或 GitHub Action",
-            
+
             // 搜索
                 "Search results": "搜索结果",
 
@@ -18857,7 +18870,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
 
         // GitHub 模型集合页 https://github.com/marketplace/models
             "Select a Model": "选择模型",
-            
+
             "Welcome to GitHub Models": "欢迎访问 GiHub 模型",
                 "A catalog and playground of AI models to help you build AI features and products.": "一个AI模型目录和运行场，帮助您构建AI特性和产品。",
 
@@ -18902,7 +18915,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
                 "Undisclosed": "未公布",
             "Provider support": "供应商支持",
             "Tags": "标签",
-        
+
         // GitHub 模型聊天页面 https://github.com/marketplace/models/<user-name>/<model-name>/playground
             // 顶部栏
             "Model:": "模型：",
@@ -18949,7 +18962,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
                     "Remove": "移除",
                 "Type your prompt…": "键入提示词…",
                     "Send now": "发送",
-            
+
             // 参数设置
                 "Parameters": "参数",
                 "Reset to default inputs": "重置",
@@ -18957,7 +18970,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
                 "Show parameters setting": "显示参数设置",
                 "System prompt": "系统提示词",
                     //"Set the context for the model response.": "设置模型响应的环境。",
-                    "You are a helpful assistant...": "你是一位助理...", // 默认提示词
+                    "You are a helpful assistant...": "您是一个得力的助手...", // 默认提示词
                 "Improve prompt": "增强提示词",
                     "Adjust your prompt with specific suggestions or simply click to enhance your prompt.": "根据具体建议调整，或者简单地点击以增强您的提示词。",
                     "Current prompt": "原提示词",
@@ -18981,7 +18994,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
                 "Sync chat input and parameters": "同步聊天输入和参数",
             // 详细信息
                 "Model details page": "详细信息",
-            
+
             // 底部
                 "Azure hosted. AI powered, can make mistakes.": " Azure 托管。人工智能驱动，可能犯错。",
                 "Share feedback": "分享反馈",
@@ -22653,7 +22666,7 @@ I18N["zh-CN"]["copilot"] = {
             "Bad response": "点踩",
 
             "Scroll to bottom": "滚动至底部",
-        
+
         // 右侧
             "Open menu": "菜单",
                 // 反馈
@@ -22663,9 +22676,9 @@ I18N["zh-CN"]["copilot"] = {
                             "It’s ok": "良",
                             "Not great": "中",
                             "Hate it": "差",
-                        
+
                         "Tell us what you liked or what could be better": "告诉我们您喜欢什么或可以改进的地方",
-                        
+
                         "Please don’t include sensitive, confidential, or personal data. Your anonymous feedback helps us improve our services in line with our": "请不要包含敏感、机密或个人数据。您的匿名反馈有助于我们改进服务，根据",
                         "Privacy Policy": "隐私政策",
                         "Send": "发送",
