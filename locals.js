@@ -149,6 +149,9 @@ I18N.conf = {
         'repository/wiki': [
             '#wiki-body', // wiki 正文
         ],
+        'orgs': [
+            'a[itemprop="name codeRepository"]', // 仓库名称
+        ],
         'search': [
             'span.search-match', // 搜索匹配信息
             'div.code-list', // 代码片段预览
