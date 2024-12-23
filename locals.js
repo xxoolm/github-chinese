@@ -45,7 +45,7 @@ I18N.conf = {
      * 导入仓库 /new/import
      * ...
      */
-    rePagePath: /^\/($|home|dashboard|copilot|signup|login\/oauth|login|logout|sessions?|password_reset|orgs|explore|topics|notifications\/subscriptions|notifications|watching|stars|issues|pulls|search|trending|showcases|new\/(import|project)|new|import|settings\/(profile|admin|appearance|accessibility|notifications|billing|emails|security_analysis|security-log|security|auth|sessions|keys|ssh|gpg|organizations|enterprises|blocked_users|interaction_limits|code_review_limits|repositories|codespaces|deleted_repositories|packages|copilot|pages|replies|installations|apps\/authorizations|reminders|sponsors-log|apps|(?:personal-access-|)tokens|developers|applications\/new|applications|connections\/applications)|settings|installations\/new|marketplace|apps|account\/(organizations\/new|choose|upgrade|billing\/history)|projects|redeem|discussions|events|collections|sponsors|sponsoring|github-copilot\/signup|codespaces|developer\/register|features|security|sitemap)|^\/users\/[^\/]+\/(projects|packages|succession\/invitation)/,
+    rePagePath: /^\/($|home|dashboard|copilot|signup|login\/oauth|login|logout|sessions?|password_reset|orgs|explore|topics|notifications\/subscriptions|notifications|watching|stars|issues|pulls|search|trending|showcases|new\/(import|project)|new|import|settings\/(profile|admin|appearance|accessibility|notifications|billing|emails|security_analysis|security-log|security|auth|sessions|keys|ssh|gpg|organizations|enterprises|blocked_users|interaction_limits|code_review_limits|repositories|codespaces|deleted_repositories|packages|copilot|pages|replies|installations|apps\/authorizations|reminders|sponsors-log|apps|(?:personal-access-|)tokens|developers|applications\/new|applications|connections\/applications)|settings|installations\/new|marketplace|apps|account\/(organizations\/new|choose|upgrade|billing\/history)|projects|redeem|discussions|events|collections|sponsors|sponsoring|github-copilot\/(signup|free_signup)|codespaces|developer\/register|features|security|sitemap)|^\/users\/[^\/]+\/(projects|packages|succession\/invitation)/,
 
     // 仓库路径
     rePagePathRepo: /^\/[^\/]+\/[^\/]+\/(issues|pulls|pull|tree|watchers|stargazers|new|edit|delete|upload|find|wiki|branches|discussions|activity|rules|releases|packages|tags|labels|milestones|compare|commit|blob|blame|actions(\/metrics\/(usage|performance))?|runs|deployments|security|pulse|community|forks|fork|import|graphs\/(contributors|community|traffic|commit-activity|code-frequency)|network$|network\/(dependencies|dependents|updates|members)|settings\/(access|code_review_limits|interaction_limits|branches|branch_protection_rules|tag_protection|rules|actions|hooks|environments|codespaces|pages|security_analysis|dependabot_rules|keys|secrets|variables|installations|notifications)|settings|transfer|projects\/new|pkgs|contribute|subscription|invitations|codespaces|attestations|custom-properties)/,
@@ -21731,6 +21731,23 @@ I18N["zh-CN"]["github-copilot/signup"] = { // GitHub Copilot 个人版获取页�
            "GitHub Copilot is free for maintainers of popular open source software on GitHub and verified students. Check out the": "GitHub Copilot 对于在 GitHub 上维护流行开源软件的人员和经过验证的学生是免费的。您可以查看",
            "free use FAQ": "免费使用常见问题解答（FAQ）",
            "for more details.": "以获取更多详细信息。",
+
+    },
+    "regexp": [ // 正则翻译
+    ],
+};
+
+I18N["zh-CN"]["github-copilot/free_signup"] = { // GitHub Copilot 个人免费版获取页面
+    "static": { // 静态翻译
+
+        // https://github.com/github-copilot/free_signup
+           "Use GitHub Copilot for free": "免费使用 GitHub Copilot",
+               "🎉 Congratulations! You are eligible to use GitHub Copilot for free.": "🎉恭喜！您有资格免费使用 GitHub Copilot。",
+               "Get code suggestions in more than a dozen coding languages including Python, JavaScript, TypeScript, Go, and Ruby": "获取十多种编码语言的代码建议，包括 Python、JavaScript、TypeScript、Go 和 Ruby",
+               "Plugs into IDEs including VS Code, Visual Studio, Neovim, and JetBrains": "IDE 扩展，包括 VS Code、Visual Studio、Neovim 和 JetBrains",
+           "Eligibility requirements": "资格要求",
+            "GitHub Copilot is free to use for open source maintainers, teachers and students. We check eligibility monthly, per our policies.": "GitHub Copilot 对开源维护者、教师和学生免费开放。根据我们的政策，我们每月检查一次使用资格。",
+           "Get access to GitHub Copilot": "获取 GitHub Copilot 使用权限",
 
     },
     "regexp": [ // 正则翻译
