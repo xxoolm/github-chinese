@@ -5465,6 +5465,8 @@ I18N["zh-CN"]["settings/apps"] = { // 设置 - 开发者设置/GitHub 应用
                 "Organization permissions": "组织权限",
                     "Organization permissions permit access to organization related resources.": "组织权限允许访问组织相关资源。",
 
+                    "API Insights": "API 洞察",
+                        "View statistics on how the API is being used for an organization.": "查看有关组织如何使用 API 的统计信息。",
                     // 管理
                         "Manage access to an organization.": "管理对组织的访问。",
                     "Blocking users": "拉黑用户",
@@ -5479,6 +5481,8 @@ I18N["zh-CN"]["settings/apps"] = { // 设置 - 开发者设置/GitHub 应用
                         "View events triggered by an activity in an organization.": "查看组织中某项活动所触发的事件。",
                     "GitHub Copilot Business": "GitHub Copilot 商业版",
                         "Manage Copilot Business seats and settings": "管理 GitHub Copilot 商业版席位和设置",
+                    "Knowledge bases": "知识库",
+                        "View and manage knowledge bases for an organization.": "查看和管理组织的知识库。",
                     "Members": "成员",
                         "Organization members and teams.": "组织成员和团队。",
                     "Organization announcement banners": "组织公告横幅",
@@ -5491,6 +5495,8 @@ I18N["zh-CN"]["settings/apps"] = { // 设置 - 开发者设置/GitHub 应用
                         "Manage Codespaces settings for an organization.": "管理组织的代码空间设置。",
                     "Organization dependabot secrets": "组织 Dependabot 机密",
                         "Manage Dependabot organization secrets.": "管理 Dependabot 组织的机密。",
+                    "Organization private registries": "组织私有注册表",
+                        "Manage private registries for an organization.": "管理组织的私有注册表。",
                     "Personal access token requests": "个人访问令牌请求",
                         "Manage personal access token requests from organization members.": "管理来自组织成员的个人访问令牌请求。",
                     "Personal access tokens": "个人访问令牌",
@@ -5517,8 +5523,14 @@ I18N["zh-CN"]["settings/apps"] = { // 设置 - 开发者设置/GitHub 应用
                         "View and manage users blocked by the user.": "查看和管理被用户拉黑的用户。",
                     "Codespaces user secrets": "代码空间用户机密",
                         "Manage Codespaces user secrets.": "管理代码空间用户机密。",
+                    "Copilot Chat ": "",
+                        "This application will receive your GitHub ID, your GitHub Copilot Chat session messages (not including messages sent to another application), and timestamps of provided GitHub Copilot Chat session messages. This permission must be enabled for Copilot Extensions.": "此应用将接收您的 GitHub ID、GitHub Copilot Chat 会话消息（不包括发送到其他应用的消息）以及所提供的 GitHub Copilot Chat 会话消息的时间戳。Copilot 扩展必须启用此权限。",
+                    "Copilot Editor Context": "Copilot 编辑器语境",
+                        "This application will receive bits of Editor Context (e.g. currently opened file) whenever you send it a message through Copilot Chat.": "每当您通过 Copilot Chat 向应用发送消息时，该应用都会收到一些编辑器上下文（例如当前打开的文件）。",
                     "Email addresses": "电子邮箱地址",
                         "Manage a user's email addresses.": "管理用户的电子邮箱地址。",
+                    // 活动
+                        "View events triggered by a user's activity.": "查看用户活动触发的事件。",
                     // 关注者
                         "A user's followers": "用户的关注者",
                     "GPG keys": "GPG 密钥",
@@ -5585,6 +5597,10 @@ I18N["zh-CN"]["settings/apps"] = { // 设置 - 开发者设置/GitHub 应用
                     "Deployment review requested, approved or rejected": "部署审查的请求、批准或拒绝",
                 "Deployment status": "部署状态",
                     "Deployment status updated from the API.": "通过 API 更新部署状态。",
+                "Exemption request push ruleset": "推送规则集豁免请求",
+                    "Push ruleset bypass request was created, cancelled, completed, received a response, or a response was dismissed. Note: Delegated bypass for push rules is currently in beta and subject to change.": "推送规则集旁路请求已创建、取消、完成、收到响应或驳回响应。注：推送规则的委托旁路目前处于测试阶段，可能会有更改。",
+                "Exemption request secret scanning": "秘密扫描豁免请求",
+                    "Secret scanning push protection bypass request was created, cancelled, completed, received a response, or a response was dismissed. Note: Delegated bypass for push protection is currently in beta and subject to change.": "秘密扫描推送保护旁路请求已创建、取消、完成、收到响应或驳回响应。注：推送保护的授权旁路目前处于测试阶段，可能会有更改。",
                 //"复刻": "",
                     "Repository forked.": "仓库复刻。",
                 "Gollum": "咕噜",
@@ -5621,6 +5637,8 @@ I18N["zh-CN"]["settings/apps"] = { // 设置 - 开发者设置/GitHub 应用
                     "Project item created, edited, deleted, archived, restored, converted, or reordered.": "项目条目的创建、编辑、删除、归档、恢复、转换或重新排序。",
                 "Projects v2": "项目 v2",
                     "Project created, updated, deleted, closed, or reopened.": "项目的创建、更新、删除、关闭或重新打开。",
+                "Projects v2 status update": "项目 v2 状态更新",
+                    "Project status updates created, updated, or deleted.": "项目状态更新的创建、更新或删除。",
                 // 公共
                     "Repository changes from private to public.": "仓库从私有更改为公共。",
                 "Pull request": "拉取请求",
@@ -5649,7 +5667,7 @@ I18N["zh-CN"]["settings/apps"] = { // 设置 - 开发者设置/GitHub 应用
                     "Secrets scanning alert created, resolved, reopened, validated, or publicly leaked.": "机密扫描警报的创建、解决、重新打开、验证或公开泄露。",
                 "Secret scanning alert location": "机密扫描警报位置",
                     "Secrets scanning alert location created.": "机密扫描警报位置的创建。",
-                "Secret scanning scans": "机密扫描",
+                "Secret scanning scan": "机密扫描",
                     "Secrets scanning scan completed.": "机密扫描已完成",
                 // 星标
                     "A star is created or deleted from a repository.": "星标或取消仓库星标。",
@@ -5671,11 +5689,12 @@ I18N["zh-CN"]["settings/apps"] = { // 设置 - 开发者设置/GitHub 应用
                     "A user has been blocked or unblocked.": "用户拉黑或解除拉黑。",
                 "Repository advisory": "仓库公告",
                     "Repository advisory published or reported.": "仓库公告发布或报告。",
+                "Sub issues": "子提议",
+                    "Sub-issues added or removed, and parent issues added or removed.": "子议题和父议题的添加或删除。",
 
             "Where can this GitHub App be installed?": "这款 GitHub 应用可以安装在哪里？",
                 "Only on this account": "仅在当前账户",
-                    "Only allow this GitHub App to be installed on the": "只允许该 GitHub 应用被安装在",
-                    "account.": "账户。",
+                    // [/Only allow this GitHub App to be installed on the (@[^ ]+) account./, "仅允许在 $1 帐户上安装此 GitHub 应用。"],
                 "Any account": "任何账户",
                     "Allow this GitHub App to be installed by any user or organization.": "允许任何用户或组织安装此 GitHub 应用。",
 
@@ -5844,6 +5863,7 @@ I18N["zh-CN"]["settings/apps"] = { // 设置 - 开发者设置/GitHub 应用
 
     },
     "regexp": [ // 正则翻译
+        [/Only allow this GitHub App to be installed on the (@[^ ]+) account./, "仅允许在 $1 帐户上安装此 GitHub 应用。"],
         [/Choose an account to install (.*) on:/, "选择要安装 $1 的账户："],
         [/Install (.*) on this account./, "安装 $1 到此账户上。"],
         [/Install (.*)/, "安装 $1"],
