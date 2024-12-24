@@ -21115,10 +21115,11 @@ I18N["zh-CN"]["orgs/settings/applications"] = { // 组织设置 - OAuth 应用
         ...I18N["zh-CN"]["orgs-settings-menu"]["static"],
 
         // OAuth 应用 /organizations/<org-login>/settings/applications
-            "No Organization Owned Applications": "没有组织拥有的应用",
-            "Do you want to develop an application that uses the": "您想开发一个应用，使用",
-            "? Register an application to generate OAuth tokens.": "？注册应用以生成 OAuth 令牌。",
-            "Register an application": "注册应用",
+            "OAuth apps": "OAuth 应用",
+            "No Organization Owned Apps": "没有组织拥有的应用",
+            "Do you want to develop an App that uses the GitHub API? Register an App to generate OAuth tokens.": "您想开发一个使用 GitHub API 的应用吗？注册应用 生成 OAuth 令牌。",
+            "New OAuth app": "新建 OAuth 应用",
+
     },
     "regexp": [ // 正则翻译
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
