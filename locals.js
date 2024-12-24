@@ -2916,6 +2916,7 @@ I18N["zh-CN"]["orgs-settings-menu"] = { // 组织设置 公共部分
             "Compliance": "承诺",
             "Verified and approved domains": "经验证和批准的域名",
             "Secrets and variables": "机密和变量",
+                "Private registries": "私有注册表",
 
             "Third-party Access": "第三方访问",
             "OAuth app policy": "OAuth 应用策略",
@@ -20663,10 +20664,10 @@ I18N["zh-CN"]["orgs/settings/domains"] = { // 组织设置 - 经验证和批准�
 I18N["zh-CN"]["orgs/settings/secrets"] = { // 组织设置 - 机密和变量
     "static": { // 静态翻译
         ...I18N["zh-CN"]["orgs-settings-menu"]["static"],
+        ...I18N["zh-CN"]["confirm-access"]["static"],
 
         // 操作机密 /organizations/<org-login>/settings/secrets/actions
             "Actions secrets and variables": "操作机密和变量",
-            "New organization secret": "新建组织机密",
             "Secrets and variables allow you to manage reusable configuration data. Secrets are": "机密和变量允许您管理可重复使用的配置数据。机密是",
             "encrypted": "被加密",
             "and are used for sensitive data.": "，用于敏感数据。",
@@ -20687,7 +20688,8 @@ I18N["zh-CN"]["orgs/settings/secrets"] = { // 组织设置 - 机密和变量
             "Variables": "变量",
 
             "Organization secrets": "组织机密",
-            "This organization has no secrets.": "该组织尚无机密。",
+                "This organization has no secrets.": "该组织尚无机密。",
+                "New organization secret": "新建组织机密",
 
             "Visibility": "可见性",
             "Last updated": "最后更新",
@@ -20702,6 +20704,7 @@ I18N["zh-CN"]["orgs/settings/secrets"] = { // 组织设置 - 机密和变量
             "Delete secret": "删除机密",
                 "Are you sure you want to delete": "您确定要删除",
                     "Deleting": "删除",
+                    "Unable to delete": "无法删除",
                 "Yes, delete this": "是的，删除该",
                 "secret": "机密",
 
@@ -20785,13 +20788,13 @@ I18N["zh-CN"]["orgs/settings/secrets"] = { // 组织设置 - 机密和变量
 
         // 代码空间机密 /organizations/<org-login>/settings/secrets/codespaces
             "Codespaces secrets": "代码空间机密",
-            "Development environment secrets": "开发环境机密",
-                "Development environment secrets are environment variables that are": "开发环境机密是环境变量",
-                "encrypted": "被加密",
-                ". They are available to any codespace user with": "。任何代码空间用户具有",
-                "collaborator": "协作者",
-                "access to the repositories with access to that secret.": "权限访问该机密的仓库。",
+            "Development environment secrets are environment variables that are": "开发环境机密是环境变量",
+            "encrypted": "被加密",
+            ". They are available to any codespace user with": "。任何代码空间用户具有",
+            "collaborator": "协作者",
+            "access to the repositories with access to that secret.": "权限访问该机密的仓库。",
 
+            "Development environment secrets": "开发环境机密",
                 "This organization has no development environment secrets.": "该组织尚无开发环境机密。",
                 "New codespace secret": "新建代码空间机密",
 
@@ -20806,6 +20809,31 @@ I18N["zh-CN"]["orgs/settings/secrets"] = { // 组织设置 - 机密和变量
             "All repositories": "所有仓库",
             "This secret may be used by any repository in the organization.": "组织中的任何仓库都可以使用此机密。",
             "This secret may be used by any private repository in the organization.": "组织中的任何私有仓库都可以使用此机密。",
+
+        // 私有登记表 /organizations/<org-login>/settings/secrets/private_registries
+            "Private Registries": "私有注册表",
+            "Private registry configurations include passwords or tokens that are handled as encrypted secrets. Access to private registry configurations is limited to": "私有注册表配置包括加密处理的密码或令牌作为机密。对私有注册表配置的访问仅限于",
+            "CodeQL default setup": "CodeQL 默认设置",
+            "for analyzing code. The automatically-generated name for a private registry configuration is visible to users in log files for debugging. No other information is accessible to users.": "用于分析代码。用户可以在日志文件中看到自动生成的私有注册表配置名称，以便进行调试。用户无法访问其他信息。",
+            "Private registry secrets": "私人注册表机密",
+
+            "New private registry": "新建私有注册表",
+
+        // 新建私有登记表 /organizations/<org-login>/settings/secrets/private_registries/new
+            "Private registries": "私有注册表",
+            "New private registry": "新建私有注册表",
+            "Select registry type": "选择注册表类型",
+                "Maven Repository": "Maven 仓库",
+                "NuGet Feed": "NuGet 订阅",
+                "Token": "令牌",
+                "Username and password": "用户名和密码",
+                "Username": "用户名",
+                "Password": "密码",
+                "Add Registry": "添加注册表",
+
+        // 编辑私有登记表 /organizations/<org-login>/settings/secrets/private_registries/<>
+            "Edit private registry": "编辑私有注册表",
+            "Type": "类型",
 
     },
     "regexp": [ // 正则翻译
