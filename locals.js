@@ -6678,11 +6678,17 @@ I18N["zh-CN"]["page-new-repo"] = {// 仓库 - 新建/导入/复刻仓库
 
         // 新建仓库 https://github.com/new
             "Create a new repository": "创建新仓库",
-            "A repository contains all project files, including the revision history.": "仓库包含项目中的所有文件，包括修订历史记录。",
-            "Already have a project repository elsewhere?": "在其他地方已有仓库？",
-            "Import a repository.": "导入仓库",
-            //"Cancel": "取消",
-            //"Begin import": "开始导入",
+                "A repository contains all project files, including the revision history.": "仓库包含项目中的所有文件，包括修订历史记录。",
+                "Already have a project repository elsewhere?": "在其他地方已有仓库？",
+                "Import a repository.": "导入仓库",
+                "Required fields are marked with an asterisk (*).": "带星号 (*) 的为必填项。",
+
+            "Repository template": "仓库模板",
+                "Fetching templates…": "正在获取模板…",
+                "No template": "不设置模板",
+                "No templates available.": "无可用模板。",
+                "Start your repository with a template repository's contents.": "使用模板仓库的内容新建仓库。",
+
             "Owner": "所有者",
             "Repository name": "仓库名称",
             "Great repository names are short and memorable. Need inspiration? How about": "好的仓库名称应该简单且容易记忆。需要灵感吗？这个怎么样：",
@@ -6712,17 +6718,17 @@ I18N["zh-CN"]["page-new-repo"] = {// 仓库 - 新建/导入/复刻仓库
             "Private": "私有",
                 "You choose who can see and commit to this repository.": "您可以选择谁可以看和提交到该仓库。",
             "Initialize this repository with:": "使用以下方式初始化此仓库：",
-                "Skip this step if you’re importing an existing repository.": "如果您要导入现有仓库，请跳过此步骤。",
-            "Add a README file": "添加 README 文件",
-                "This is where you can write a long description for your project.": "您可以在此处为您的项目编写详细描述。",
-                "Learn more about READMEs.": "了解更多关于 README 的信息。",
+                // "Skip this step if you’re importing an existing repository.": "如果您要导入现有仓库，请跳过此步骤。",
+                "Add a README file": "添加 README 文件",
+                    "This is where you can write a long description for your project.": "您可以在此处为您的项目编写详细描述。",
+                    "Learn more about READMEs.": "了解更多关于 README 的信息。",
             "Add .gitignore": "添加 .gitignore 文件",
                 "Choose which files not to track from a list of templates.": "从模板列表中选择哪些文件不需要跟踪。",
                 "Learn more about ignoring files.": "了解更多关于忽略文件的信息。",
-            ".gitignore template:": ".gitignore 模板：",
-                ".gitignore template": ".gitignore 模板",
-                "Filter…": "筛选…",
-                "None": "无",
+                ".gitignore template:": ".gitignore 模板：",
+                    ".gitignore template": ".gitignore 模板",
+                    "Filter…": "筛选…",
+                    "None": "无",
             "Choose a license": "选择许可证",
                 "A license tells others what they can and can't do with your code.": "许可证告诉其他人，他们可以使用您的代码做什么和不能做什么。",
                 "Learn more about licenses.": "了解更多关于许可证的信息。",
@@ -6747,13 +6753,9 @@ I18N["zh-CN"]["page-new-repo"] = {// 仓库 - 新建/导入/复刻仓库
             "settings": "设置",
 
             "Create repository": "创建仓库",
-            "Creating repository…": "创建仓库中…",
+            "Creating repository...": "创建仓库中...",
 
         // 依据模板新建仓库 https://github.com/new?template_owner=<template-owner>&template_name=<template-name>
-            "Repository template": "仓库模板",
-                "Fetching templates…": "正在获取模板…",
-                "No template": "不设置模板",
-                "Start your repository with a template repository's contents.": "使用模板仓库的内容新建仓库。",
             "Include all branches": "包括所有分支",
                 "Copy all branches from": "复制所有",
                 "and not just the default branch.": "仓库分支，而不仅仅是默认分支。",
@@ -6775,7 +6777,7 @@ I18N["zh-CN"]["page-new-repo"] = {// 仓库 - 新建/导入/复刻仓库
 
             "Your new repository details": "新仓库详情",
             //"Owner": "所有者",
-            "Repository Name": "仓库名称",
+            // "Repository name": "仓库名称",
                 // "is available.": "名称可用。",
                 //"The repository": "仓库",
                 //"already exists on this account.": "已经存在于此账户。",
@@ -6808,26 +6810,24 @@ I18N["zh-CN"]["page-new-repo"] = {// 仓库 - 新建/导入/复刻仓库
 
         // 复刻仓库 /<user-name>/<repo-name>/fork
             "Create a new fork": "创建新复刻",
-            "A": " ",
-            "fork": "复刻",
-            "is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.": "是一个仓库的副本。复刻仓库可以让您在不影响原项目的情况下自由地进行修改实验。",
-            "View existing forks.": "查看现有复刻。",
+                "A": " ",
+                "fork": "复刻",
+                "is a copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project.": "是一个仓库的副本。复刻仓库可以让您在不影响原项目的情况下自由地进行修改实验。",
+                "View existing forks.": "查看现有复刻。",
+
             "No available destinations to fork this repository.": "没有复刻此仓库的可用目标。",
-            "Required fields are marked with an asterisk (*).": "带星号 (*) 的为必填项。",
             "Creating fork…": "正在创建复刻…",
 
-            "Owners": "所有者",
+            // "Owners": "所有者",
                 "Choose an owner": "选择所有者",
-            "Repository name": "仓库名称",
+            // "Repository name": "仓库名称",
 
-                // [/is available./, "名称可用。"], // 复刻页面
-                "The repository": "仓库",
-                "already exists on this account.": "已经存在于此账户。",
+                // "The repository": "仓库",
+                // "already exists on this account.": "已经存在于此账户。",
                 "Your new repository will be created as": "您的新仓库将被创建为",
                     "The repository name can only contain ASCII letters, digits, and the characters": "仓库名称只能包含 ASCII 字母、数字和字符",
 
             "By default, forks are named the same as their upstream repository. You can customize the name to distinguish it further.": "默认情况下，复刻的名称与他们的上游仓库相同。您可以自定义名称以进一步区分它。",
-            "(optional)": "（可选）",
 
             "Copy the": "仅复制",
             "branch only": "分支",
@@ -6840,12 +6840,11 @@ I18N["zh-CN"]["page-new-repo"] = {// 仓库 - 新建/导入/复刻仓库
 
     },
     "regexp": [ // 正则翻译
-        [/([^ ]+) is available\./,"$1 名称可用。"],
+        // [/([^ ]+) is available\./,"$1 名称可用。"],
         [/You are creating a public repository in the ([^ ]+) organization./,"您正在 $1 组织中创建一个公共仓库。"], // 创建组织的公共仓库
         [/You are creating a private repository in the ([^ ]+) organization./,"您正在 $1 组织中创建一个私有仓库。"], // 创建组织的私有仓库
-        [/\(fork already exists\)/, "（复刻已存在）"], // 复刻页面
-        [/\(repository already exists\)/, "（仓库已存在）"], // 复刻页面
-        [/is available./, "名称可用。"], // 复刻页面
+        // [/\(fork already exists\)/, "（复刻已存在）"], // 复刻页面
+        // [/\(repository already exists\)/, "（仓库已存在）"], // 复刻页面
         [/You are creating a fork in the ([^ ]+) organization./, "您正在 $1 组织中创建一个复刻。"], // 复刻页面
         [/Updating branches and (\d+) commit authors?…/, "更新分支和 $1 个提交者…"], // 仓库导入第二页
         ...I18N["zh-CN"]["repository-public"]["regexp"],
