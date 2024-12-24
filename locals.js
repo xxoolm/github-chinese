@@ -579,6 +579,9 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
             "Search syntax tips": "搜索语法提示",
             "Jump to": "跳转到",
 
+            "Ask Copilot": "询问 Copilot",
+            "Start a new Copilot thread": "启动新的 Copilot 对话",
+
             // 未登录时
                 "Enterprise": "企业",
                 "Security": "安全",
@@ -1410,7 +1413,7 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
          * 1. 修复 Bug: 意外的扩大了匹配范围(不带前缀与后缀的时间) 干扰了带有相对时间的其他规则
          *  7 months
          */
-            [/^just now|^now|^last month|^yesterday|(?:(over|about|almost|in) |)(an?|\d+)(?: |)(second|minute|hour|day|month|year)s?( ago|)/, function (all, prefix, count, unit, suffix) {
+         [/^just now|^now|^last month|^yesterday|(?:(over|about|almost|in) |)(an?|\d+)(?: |)(second|minute|hour|day|month|year)s?( ago|)/, function (all, prefix, count, unit, suffix) {
             if (all === 'now') {
                 return '现在';
             }
@@ -2421,7 +2424,7 @@ I18N["zh-CN"]["page-profile/projects"] = { // 个人首页- 项目标签卡
             "Welcome to the all-new projects": "欢迎访问全新的项目",
             "Built like a spreadsheet, project tables give you a live canvas to filter, sort, and group issues and pull requests. Tailor them to your needs with custom fields and saved views.": "构建像电子表格一样的项目表，给您一个实时的画布来对议题和拉取请求进行筛选、排序和分组。通过自定义字段和保存的视图，使它们符合您的需要。",
 
-            "Learn more about projects": "了解更多关于项目", // ?tab=projects
+            "Learn more about projects": "了解更多关于项目的信息", // ?tab=projects
 
             "Create your first GitHub project": "创建您的第一个 GitHub 项目",
             "Projects are a customizable, flexible tool for planning and tracking your work.": "项目是一个可定制的、灵活的工具，用于规划和跟踪您的工作。",
@@ -3493,7 +3496,7 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
                 "Connect with the community that builds the tools you use": "与构建您使用的工具的社区联系",
                 "Start sponsoring": "开始赞助",
                 "You're currently not sponsoring anyone.": "您目前没有赞助任何人。",
-                "Learn more about GitHub Sponsors": "了解更多关于 GitHub 赞助",
+                "Learn more about GitHub Sponsors": "了解更多关于 GitHub 赞助的信息",
                 "Switch to invoiced billing": "切换到发票账单", // 组织
 
             "GitHub Marketplace": "GitHub 市场",
@@ -3942,7 +3945,7 @@ I18N["zh-CN"]["settings/security"] = { // 设置 - 密码和身份身份验证
             "I forgot my password": "我忘记了我的密码",
 
             "Strengthen your account by ensuring your password is strong.": "确保密码的安全性，以保护您的账户。",
-            "Learn more about creating a strong password": "了解如何创建强密码",
+            "Learn more about creating a strong password": "了解更多关于创建强密码的信息",
 
             "Passkeys": "通行密钥",
                 "Passwordless sign-in with passkeys": "使用通行密钥进行无密码登录",
@@ -4320,7 +4323,7 @@ I18N["zh-CN"]["settings/enterprises"] = { // 设置 - 企业版
         "You don't have any enterprises": "您还没有任何企业版",
         "Designed for businesses or teams who collaborate on GitHub.com": "专为在 GitHub.com 上协作的企业或团队而设计",
 
-        "Start free trial": "开启免费体验",
+        "Start a free trial": "开启免费体验",
         "Learn more about enterprises": "了解更多关于企业版信息",
     },
     "regexp": [ // 正则翻译
@@ -4680,7 +4683,7 @@ I18N["zh-CN"]["settings/copilot"] = { // 设置 - GitHub Copilot
             "Copilot policies": "Copilot 规则",
                 "Copilot in github.com": "在 github.com 中使用 Copilot",
                     "You can use Copilot Chat in github.com, but not preview features.": "您可以在 github.com 中使用 Copilot Chat，但无预览功能。",
-                    "Learn more about Copilot in github.com": "了解更多",
+                    "Learn more about Copilot in github.com": "了解更多关于在 github.com 中使用 Copilot 的信息",
                 "Suggestions matching public code (duplication detection filter)": "公共代码匹配的建议（重复检测过滤器）",
                     "Copilot can allow or block suggestions matching public code. Learn more about": "Copilot 可允许或阻止与公共代码匹配的建议。了解更多关于",
                     "code suggestions": "代码建议",
@@ -4703,7 +4706,7 @@ I18N["zh-CN"]["settings/copilot"] = { // 设置 - GitHub Copilot
                     "GitHub Copilot won't answer questions about new trends and give improved answers": "GitHub Copilot 将不会回答有关新趋势的问题并给出改进的答案",
                 "Anthropic Claude 3.5 Sonnet in Copilot": "Claude 3.5 模型", // 简化部分名称
                     "You can use the latest Claude 3.5 Sonnet model.": "您可以使用最新 Claude 3.5 Sonnet 模型。",
-                    "Learn more about how GitHub Copilot serves Claude 3.5 Sonnet.": "进一步了解 GitHub Copilot 如何为 Claude 3.5 Sonnet 服务。",
+                    "Learn more about how GitHub Copilot serves Claude 3.5 Sonnet.": "了解更多关于 GitHub Copilot 如何为 Claude 3.5 Sonnet 提供服务。",
                     "Select an option": "选择",
                         "You will have access to the feature": "您将能够访问此功能",
                         "You won’t have access to the feature": "您将不能访问此功能",
@@ -5368,7 +5371,7 @@ I18N["zh-CN"]["settings/apps"] = { // 设置 - 开发者设置/GitHub 应用
                     "Events will POST to this URL. Read our": "事件将 POST 到此网址。阅读",
                     "webhook documentation": "关于 Web 钩子",
                     "for more information.": "以获取更多信息。",
-                "Webhook secret (optional)": "Web 钩子机密 (可选)",
+                "Secret": "机密",
                     "Read our": "阅读我们",
                     "webhook secret documentation": "Web 钩子机密文档",
 
@@ -5700,7 +5703,7 @@ I18N["zh-CN"]["settings/apps"] = { // 设置 - 开发者设置/GitHub 应用
                 "Using your App ID to get installation tokens? You can now": "使用您的 App ID 获取安装令牌？您现在可以",
                 "use your Client ID instead": "使用您的 Client ID",
                 "Revoke all user tokens": "撤销所有用户令牌",
-                "GitHub Apps can use OAuth credentials to identify users. Learn more about identifying users by reading our": "GitHub 应用可以使用 OAuth 凭据来识别用户。阅读我们的",
+                "GitHub Apps can use OAuth credentials to identify users. Learn more about identifying users by reading our": "GitHub 应用可以使用 OAuth 凭据来识别用户。了解更多关于识别用户的信息，请阅读我们的",
                 "integration developer documentation": "集成开发者文档",
 
                 "Public link": "公共链接",
@@ -5886,7 +5889,7 @@ I18N["zh-CN"]["settings/applications/new"] = { // 设置 - 开发者设置/OAuth
         // 注册 OAuth 应用 https://github.com/settings/applications/new
             "Developer Settings": "开发者设置",
 
-            "Register a new OAuth application": "注册 OAuth 应用",
+            "Register a new OAuth app": "注册 OAuth 应用",
             "Application name": "应用名",
             "Something users will recognize and trust.": "让用户识别和信任。",
             "Homepage URL": "主页地址",
@@ -6394,6 +6397,7 @@ I18N["zh-CN"]["repository-public"] = { // 仓库 - 公共部分
             "Mark as read": "标记为已读",
             "Mark as unread": "标记为未读",
             "Save": "保存",
+            "Unsave": "未保存",
 
             // 评论框头部栏 (议题 & 拉取请求)
                 "Contributor": "贡献者",
@@ -7748,7 +7752,7 @@ I18N["zh-CN"]["repository/pull_issue_public"] = { // 仓库 - 议题和拉取请
 
                 // 隐藏评论对话框
                 "The reason will be displayed to describe this comment to others.": "将显示原因，以便向其他人描述此评论。",
-                "Learn more about hiding comments": "学习如何隐藏评论",
+                "Learn more about hiding comments": "了解更多关于隐藏评论的信息",
                 "comment": "评论",
                 "Unhide": "取消隐藏",
                 "Choose a reason for hiding this comment": "选择隐藏此评论原因",
@@ -8501,6 +8505,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "the": " ",
             "branch from": "分支从",
             "and others": "和其他成员",
+            "previously": "预先",
             "approved these changes": "批准这些更改",
             "previously approved these changes": "预先批准这些更改",
                 "See review": "查看审查",
@@ -8624,7 +8629,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "First-time contributors need a maintainer to approve running workflows.": "首次贡献者需要维护者来批准正在运行的工作流。",
             "The base branch does not accept merge commits. Alternate merge methods are preferred.": "基础分支不接受合并提交。其他合并方法是首选。",
             // [/The ([^ ]+) branch requires linear history/, "$1 分支为要求线性历史记录"],
-            "Learn more about required linear history.": "了解更多关于要求线性历史记录。",
+            "Learn more about required linear history.": "了解更多关于要求线性历史记录的信息。",
 
             "Checking for ability to merge automatically…": "检测自动合并的能力…",
             "Hang in there while we check the branch’s status.": "请等待，我们正在检查该分支的状态",
@@ -8908,6 +8913,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
 
             // 代码评论
                 "Comment on lines": "评论行",
+                "Commenting on lines": "评论行",
 
             // 建议更改
                 "Suggested change": "建议更改",
@@ -10211,7 +10217,7 @@ I18N["zh-CN"]["repository/discussions"] = { // 讨论页面
 
             // 隐藏评论对话框
                 "The reason will be displayed to describe this comment to others.": "将显示原因，以便向其他人描述此评论。",
-                "Learn more about hiding a comment": "学习如何隐藏评论",
+                "Learn more about hiding a comment": "了解更多关于隐藏评论的信息",
                 "Choose a reason for hiding this comment": "选择隐藏此评论原因",
                 "Unhide": "取消隐藏",
                 "Choose a reason": "选择原因",
@@ -10478,7 +10484,7 @@ I18N["zh-CN"]["repository/actions"] = { // 仓库 - 操作页面
 
             "Automate your workflow from idea to production": "从创意到产品，使您的工作流程自动化",
             "GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub.": "GitHub Actions 现在可以使用世界一流的 CI/CD 轻松自动化所有软件工作流程。直接从 GitHub 构建、测试和部署您的代码。",
-            "Learn more about getting started with Actions.": "了解更多关于开始使用 Actions 的信息。",
+            "Learn more about getting started with Actions.": "了解更多关于开始使用 GitHub Actions 的信息。",
             "Linux, macOS, Windows, ARM, and containers": "Linux、macOS、Windows、ARM 和容器",
             "Hosted runners for every major OS make it easy to build and test all your projects. Run directly on a VM or inside a container. Use your own VMs, in the cloud or on-prem, with self-hosted runners.": "为每一个主要的操作系统提供的托管运行程序，使您能够轻松地构建和测试您的所有项目。直接在虚拟机上或容器内运行。在云端或本地使用您自己的虚拟机，以及自托管的运行器。",
 
@@ -11012,7 +11018,7 @@ I18N["zh-CN"]["repository/stargazers"] = { // 仓库 - 追星者页面
 
         // /<user-name>/<repo-name>/stargazers/you_know
             "No one you follow has starred this repository yet.": "您关注的任何人都未星标此仓库。",
-            "Learn more about how starring works on GitHub.": "了解在 GitHub 上星标的工作原理。",
+            "Learn more about how starring works on GitHub.": "了解更多关于在 GitHub 上星标的工作原理。",
     },
     "regexp": [ // 正则翻译
         ...I18N["zh-CN"]["repository-public"]["regexp"],
@@ -11715,7 +11721,7 @@ I18N["zh-CN"]["repository/releases"] = { // 仓库 - 发行版页面
             "Releases": "发行版",
             // 无发行版时
             "There aren’t any releases here": "没有任何发行版",
-            "You can create a release to package software, along with release notes and links to binary files, for other people to use. Learn more about releases in": "您可以创建一个发行版来打包软件，以及发行说明和二进制文件链接，供其他人使用。了解更多关于发布的信息查看",
+            "You can create a release to package software, along with release notes and links to binary files, for other people to use. Learn more about releases in": "您可以创建一个发行版来打包软件，以及发行说明和二进制文件链接，供其他人使用。了解更多关于发行版的信息，查看",
             "our docs": "文档",
             "Releases are powered by": "发行版是指通过对仓库中",
             "tagging specific points of history": "特定历史点",
@@ -12602,7 +12608,7 @@ I18N["zh-CN"]["repository/security"] = { // 仓库 - 安全页面
             "Vector string": "矢量字符串",
 
             "Calculator": "计算器",
-                "Learn more about CVSS scoring": "了解更多 CVSS 计分的信息",
+                "Learn more about CVSS scoring": "了解更多关于 CVSS 计分的信息",
 
                 "Adjacent": "邻近",
                 "Physical": "物理",
@@ -14150,7 +14156,7 @@ I18N["zh-CN"]["repository/settings/tag_protection"] = { // 仓库设置 - 标签
             "Level up your tag protections with Repository Rules": "利用仓库规则提升标签保护级别",
             "Protected tags are being deprecated. To continue protecting tags, please migrate to a tag ruleset by August 30th. You can learn more about the sunset in our": "受保护的标签将被废弃。要继续保护标签，请在 8 月 30 日前迁移到标签规则集。您可以在我们的",
             "changelog": "更改日志",
-            "and can get started now by migrating to rulesets.": "且现在就可以开始迁移到规则集。",
+            "and can get started now by migrating to rulesets.": "中了解更多信息，并且可以立即开始迁移到规则集。",
 
             "Protected tags": "受保护的标签",
             "Protected tags are available to Pro, Team, and Enterprise users": "专业版、团队版和企业版用户均可使用受保护的标签", //私有库
@@ -14473,7 +14479,7 @@ I18N["zh-CN"]["repository/settings/rules"] = { // 仓库设置 - 规则 - 规则
                             "Errors": "仅错误",
                             "Errors and Warnings": "错误和警告",
                         "Tools that must provide code scanning results for this rule to pass.": "必须提供代码扫描结果才能通过此规则的工具。",
-                        "Learn more about enabling code scanning.": "了解如何启用代码扫描。",
+                        "Learn more about enabling code scanning.": "了解更多关于启用代码扫描的信息。",
 
                     // 组织设置
                     "Require workflows to pass before merging": "要求合并前，工作流通过状态检查",
@@ -15270,6 +15276,7 @@ I18N["zh-CN"]["repository/settings/pages"] = { // 仓库设置页面(含组织�
             // 私有库 提醒
             "Upgrade or make this repository public to enable Pages": "升级或公开该仓库，以启用 GitHub Pages",
             "GitHub Pages is designed to host your personal, organization, or project pages from a GitHub repository.": "GitHub Pages 旨在从 GitHub 仓库中托管您的个人、组织或项目页面。",
+            "Learn more about GitHub Pages": "了解更多关于 GitHub Pages 的信息",
             // 存档时 提醒
             "This repository has been archived. The associated GitHub Pages site remains published but settings are read-only.": "该仓库已存档。相关的 GitHub Pages 网站仍然发布，但设置是只读的。",
 
@@ -15540,13 +15547,13 @@ I18N["zh-CN"]["repository/settings/security_analysis"] = { // 仓库设置 - 代
 
                     "Copilot Autofix": "Copilot 自动修复",
                         "Suggest fixes for CodeQL alerts using AI. CodeQL default or advanced setup must be enabled for this feature to work. Learn more about the": "使用 AI 为 CodeQL 警报提出修复建议。必须启用 CodeQL 默认设置或高级设置才能使用此功能。了解更多关于",
-                        "limitations of autofix code suggestions": "自动修复代码建议限制的信息",
+                        "limitations of autofix code suggestions": "自动修复代码建议的限制",
                         "On": "开",
                         "Off": "关",
 
                     "Copilot Autofix for third-party tools": "适用于第三方工具的 Copilot 自动修复",
-                        "Suggest fixes for third-party alerts using AI. Ensure that these tools are properly configured or that an analysis is uploaded for this feature to work. Learn more about the": "使用人工智能对第三方警报提出修复建议。确保这些工具已正确配置或已上传分析，以便此功能正常工作。了解",
-                        "limitations of autofix code suggestions for third party tools": "第三方工具自动修复代码建议局限性",
+                        "Suggest fixes for third-party alerts using AI. Ensure that these tools are properly configured or that an analysis is uploaded for this feature to work. Learn more about the": "使用人工智能对第三方警报提出修复建议。确保这些工具已正确配置或已上传分析，以便此功能正常工作。了解更多关于",
+                        "limitations of autofix code suggestions for third party tools": "第三方工具自动修复代码建议的限制",
 
                 "Protection rules": "保护规则",
                     "Pull request check failure": "拉取请求检查失败",
@@ -16257,7 +16264,7 @@ I18N["zh-CN"]["session-authentication"] = { // 登录页 包含(/login, /session
             "Created": "创建于",
             "More than 1K": "超过1K",
             "GitHub users": "GitHub 用户",
-            "Learn more about OAuth": "了解更多有关 OAuth 的信息",
+            "Learn more about OAuth": "了解更多关于 OAuth 的信息",
 
         // 设备授权成功 https://github.com/login/device/success
             "Congratulations, you're all set!": "恭喜，一切就绪！",
@@ -16466,6 +16473,7 @@ I18N["zh-CN"]["session-authentication"] = { // 登录页 包含(/login, /session
 
         // 授权访问 sudo 模式身份验证
             "Confirm access": "授权访问",
+            "Signed in as": "登录身份为",
             "Authentication code": "验证码",
                 "More information about sudo mode authentication": "更多关于 sudo 模式身份验证的信息",
             "Open your two-factor authenticator (TOTP) app or browser extension to view your authentication code.": "打开您的双因素身份验证器 (TOTP) 应用或浏览器扩展以查看您的身份验证码。",
@@ -16763,6 +16771,7 @@ I18N["zh-CN"]["notifications"] = { // 通知页面
         "author": "作者",
         "manual": "手动",
         "state change": "状态更改",
+        "review requested": "请求审查",
         "ci activity": "CI 活动",
 
         "View all gist notifications": "查看全部 Gist 通知", // 仓库分组模式
@@ -17041,9 +17050,9 @@ I18N["zh-CN"]["issues"] = { // 议题页面
         "was merged": "已合并",
         "was closed": "已关闭",
         "Approved": "已批准",
-        "Review required": "需要审查", // 拉取请求 页面状态词
+        "Review required": "请求审查", // 拉取请求 页面状态词
             "Review required before merging": "合并前需要审查",
-        "Changes requested": "已请求更改",
+        "Changes requested": "请求更改",
         "outdated": "陈旧的",
         "Draft": "草案",
 
@@ -17403,7 +17412,7 @@ I18N["zh-CN"]["search"] = { // 搜索页面
                 "The path qualifier can search the entire file path, not just the extension, and supports regular expressions. For more information, see our": "路径限定符可以搜索整个文件路径，而不仅仅是扩展名，并且支持正则表达式。更多信息，请参阅我们的",
 
             "Why wasn't my code found?": "为什么找不到我的代码？",
-                "When you search within a repository for the first time, please note that the repository undergoes reindexing.": "首次在仓库中搜索时，请注意仓库会进行重新索引。",
+                "When you search within a repository for the first time, please note that the repository undergoes indexing.": "首次在仓库中搜索时，请注意仓库会进行索引。",
                 "This process may take a few minutes.": "这一过程可能需要几分钟。",
 
                 "The index currently includes more than 70 million popular public repositories, plus all private repositories that users search for.": "该索引目前包括超过 7000 万个流行的公共仓库，以及用户搜索的所有私有仓库。",
@@ -17658,7 +17667,7 @@ I18N["zh-CN"]["gist"] = { // 代码片段页面
         "Learn more about clone URLs": "了解更多关于克隆地址的信息",
 
         // 外部编辑器
-        "Open repository with": "打开于",
+        "Open repository with": "打开仓库于",
 
         "Copy to clipboard": "复制到剪切板",
         "Copied!": "✅ 复制成功!",
@@ -17691,7 +17700,7 @@ I18N["zh-CN"]["gist"] = { // 代码片段页面
 
         // 星标标签卡
         "Stargazers": "追星者",
-        "Be the first to star this gist.": "成为第一个该代码片段标星人。",
+        "Be the first to star this gist.": "成为第一个该代码片段加注星标的人。",
         "Learn more about starring Gists": "了解更多关于标星代码片段的信息",
 
         // 复刻标签卡
@@ -18589,8 +18598,8 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
             "List your tool": "列出您的工具",
             "List your tool on GitHub Marketplace": "在 GitHub 市场上列出您的工具",
             "You have no tools to list on GitHub Marketplace": "您没有可在 GitHub 市场上列出的工具",
-            "Learn more about the requirements": "了解",
-            "to list a tool on GitHub Marketplace.": "在 GitHub 市场上列出工具需要满足的条件。",
+            "Learn more about the requirements": "了解更多关于",
+            "to list a tool on GitHub Marketplace.": "在 GitHub 市场上列出工具的要求。",
             "Read the documentation": "阅读文档",
                 "Learn how you can build tools to extend and improve developers' workflows.": "了解如何构建工具来扩展和改进开发人员的工作流程",
 
@@ -18840,7 +18849,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
         // 应用设置 - 选择目标 https://github.com/apps/<app-name>/installations/select_target
             // [/Install (.*)/, "安装 $1"],
             // [/Where do you want to install (.*)\?/, "您想把 $1 安装在哪里？"],
-            // [/(.*) is installed. Click to configure.\?/, "$1 已安装。点击进行配置。"],
+            // [/(.*) is installed. Click to configure./, "$1 已安装。点击进行配置。"],
 
         // 操作介绍页面 https://github.com/marketplace/actions/<action-name>
         // 示例: https://github.com/marketplace/actions/merge-upstream
@@ -18857,7 +18866,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
                     "Installation": "安装",
                     "Copy and paste the following snippet into your": "将以下代码段复制并粘贴到您的",
                         "file.": "文件。",
-                    "Learn more about this action in": "了解有关该操作的更多信息，请访问",
+                    "Learn more about this action in": "了解更多关于该操作的信息，请访问",
 
             "Verified creator": "经验证的创建者",
             "GitHub has verified that this action was created by": "GitHub 已经验证该操作，创建由",
@@ -19065,7 +19074,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
         [/Request on your organization (.*)/, "对于您的组织 $1 的请求"], // 组织
         [/Install (.*)/, "安装 $1"],
         [/Where do you want to install (.*)\?/, "您想把 $1 安装在哪里？"],
-        [/(.*) is installed\. Click to configure.\?/, "$1 已安装。点击进行配置。"],
+        [/(.*) is installed. Click to configure./, "$1 已安装。点击进行配置。"],
         [/(.*) is a private GitHub App./, "$1 是一款私有的 GitHub 应用。"],  // 无法安装私有应用
         [/Thank you! ([^ ]+) is now on the waitlist for GitHub Models./, "谢谢！$1 现已进入 GitHub 模型等待名单。"],
         [/Search results for “([^ ]+)”/, "“$1”的搜索结果"],
@@ -20661,7 +20670,7 @@ I18N["zh-CN"]["orgs/settings/domains"] = { // 组织设置 - 经验证和批准�
             "Add a domain": "添加域名",
             "You can verify the domains controlled by your organization to confirm your organization's identity on GitHub. A": "您可以验证组织控制的域，以确认组织在 GitHub 上的身份。一个",
             "badge will be added to your organization's profile page if all of the domains displayed on your profile (e.g. public email or website URL) are verified. You may also approve a domain by first adding it to the list of eligible domains. Approved domains may be used for email notification routing to users with verified emails that do not belong to a domain that you can verify.": "的徽章，您的组织的资料页面上显示，则表明您的资料中显示的所有域名（例如公共电子邮箱地址或网站 URL）都经过验证。您也可以通过，首先将一个域名添加到合格的域名列表中来批准该域名。已批准的域名可用于通过电子邮件通知具有经过验证的邮箱地址的用户，这些电子邮箱地址不属于您可以验证的域名。",
-            "Learn more about verifying or approving a domain for your enterprise.": "了解更多有关验证或批准企业域名的信息。",
+            "Learn more about verifying or approving a domain for your enterprise.": "了解更多关于验证或批准企业域名的信息。",
     },
     "regexp": [ // 正则翻译
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
@@ -22656,7 +22665,7 @@ I18N["zh-CN"]["copilot"] = {
                 // Claude 3.5
                     "Enable Claude 3.5 Sonnet": "启用 Claude 3.5 Sonnet",
                         "Enable access to the latest Claude 3.5 Sonnet model from Anthropic.": "允许访问 Anthropic 最新的 Claude 3.5 Sonnet 模型。",
-                        "Learn more about how GitHub Copilot serves Claude 3.5 Sonnet": "进一步了解 GitHub Copilot 如何为 Claude 3.5 Sonnet 服务。",
+                        "Learn more about how GitHub Copilot serves Claude 3.5 Sonnet": "了解更多关于 GitHub Copilot 如何为 Claude 3.5 Sonnet 提供服务。",
             "uses AI. Check for mistakes.": "使用 AI。请检查错误。",
 
             "Copy code": "复制代码",
