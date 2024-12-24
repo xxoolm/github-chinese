@@ -21130,11 +21130,10 @@ I18N["zh-CN"]["orgs/settings/apps"] = { // 组织设置 - GitHub 应用
         ...I18N["zh-CN"]["orgs-settings-menu"]["static"],
 
         // GitHub 应用 /organizations/<org-login>/settings/apps
-            "New GitHub App": "新 GitHub 应用",
-            "Want to build something that integrates with and extends GitHub?": "想要构建与 GitHub 集成和扩展的东西吗？",
-            "Register a new GitHub App": "注册新的 GitHub 应用",
-            "to get started developing on the GitHub API. You can also read more about building GitHub Apps in our": "，开始在 GitHub API 上进行开发。您还可以在我们的文档中阅读有关构建 GitHub 应用的更多信息",
-            "developer documentation": "开发者文档",
+            "No GitHub Apps": "尚无 GitHub 应用",
+                "Want to build something that integrates with and extends GitHub? Register a new GitHub App to get started developing on the GitHub API.": "想创建与 GitHub 集成并扩展 GitHub 的应用吗？注册一个新的 GitHub 应用，开始使用 GitHub API 进行开发。",
+            "New GitHub App": "新建 GitHub 应用",
+            "View documentation": "查看文档",
 
             "Management": "管理人员",
             "Choose members that are allowed to manage all GitHub Apps belonging to this organization.": "选择允许管理属于该组织的所有 GitHub 应用的成员。",
