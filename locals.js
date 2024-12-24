@@ -2770,6 +2770,47 @@ I18N["zh-CN"]["page-profile/stars"] = { // 个人首页 - 星标标签卡
     ],
 };
 
+I18N["zh-CN"]["confirm-access"] = { // “授权访问” 对话框
+    "static": { // 静态翻译
+        // 授权访问 sudo 模式身份验证
+            "Confirm access": "授权访问",
+            "Signed in as": "登录身份为",
+            "Authentication code": "验证码",
+                "More information about sudo mode authentication": "更多关于 sudo 模式身份验证的信息",
+            "Open your two-factor authenticator (TOTP) app or browser extension to view your authentication code.": "打开您的双因素身份验证器 (TOTP) 应用或浏览器扩展以查看您的身份验证码。",
+            "Verify": "验证",
+            "Verify": "验证",
+            "Verifying…": "验证中…",
+            "Your authentication code has been sent.": "您的验证码已发送。",
+
+            "Having problems?": "有问题吗？",
+            "Use GitHub Mobile": "使用 GitHub Mobile",
+            "Use your passkey": "使用您的通行密钥",
+            "Use your authenticator app": "使用您的身份验证器应用",
+            "Use your password": "使用您的密码",
+
+            "GitHub Mobile": "GitHub Mobile",
+            "Creating a verification request for your GitHub Mobile app.": "为您的 GitHub Mobile 应用创建验证请求。",
+            "We sent you a verification request on your GitHub Mobile app. Enter the digits shown below to enter sudo mode.": "我们向您的 GitHub Mobile 应用发送了一个验证请求。输入下面显示的数字以进入 sudo 模式。",
+            "We could not verify your identity": "我们无法核实您的身份",
+            "Retry": "请重试",
+
+            "Password": "密码",
+            "Forgot password?": "忘记密码？",
+            "Confirm": "确认",
+
+            "Passkey": "通行密钥",
+            "When you are ready, authenticate using the button below.": "准备好后，请使用下面的按钮进行身份验证。",
+            "This browser or device does not fully support passkeys.": "此浏览器或设备不完全支持通行密钥。",
+            "Use passkey": "使用通行密钥",
+
+            "Authentication failed.": "认证失败。",
+            "Retry passkey": "重试通行密钥",
+
+            "Unable to verify with your passkey?": "无法验证您的通行密钥？",
+    },
+};
+
 I18N["zh-CN"]["settings-menu"] = { // 设置 - 公共部分
     "static": { // 静态翻译
         "Settings": "设置", // 新版全局导航
@@ -3920,8 +3961,7 @@ I18N["zh-CN"]["settings/emails"] = { // 设置 - 电子邮箱
 I18N["zh-CN"]["settings/security"] = { // 设置 - 密码和身份身份验证
     "static": { // 静态翻译
         ...I18N["zh-CN"]["settings-menu"]["static"],
-
-        "Signed in as": "登录身份为",
+        ...I18N["zh-CN"]["confirm-access"]["static"],
 
         // 密码和身份身份验证 - 账户安全 https://github.com/settings/security
             "Change password": "更改密码",
@@ -4067,43 +4107,6 @@ I18N["zh-CN"]["settings/security"] = { // 设置 - 密码和身份身份验证
                     "Recovery codes can be used to access your account in the event you lose access to your device and cannot receive two-factor authentication codes.": "恢复码可用于在您无法访问设备且无法接收双因素身份验证码的情况下访问您的账户。",
                     "Viewed": "已查看",
                     "View": "查看",
-
-            // 授权访问 sudo 模式身份验证
-                "Confirm access": "授权访问",
-                "Authentication code": "验证码",
-                    "More information about sudo mode authentication": "更多关于 sudo 模式身份验证的信息",
-                "When your phone is ready, click the button below.": "当您的手机准备就绪时，请点击下面的按钮。",
-                "Open your two-factor authenticator (TOTP) app or browser extension to view your authentication code.": "打开您的双因素身份验证器 (TOTP) 应用或浏览器扩展以查看您的身份验证码。",
-                "Verify": "验证",
-                "Verify": "验证",
-                "Verifying…": "验证中…",
-                "Your authentication code has been sent.": "您的验证码已发送。",
-
-                "Having problems?": "有问题吗？",
-                "Use GitHub Mobile": "使用 GitHub Mobile",
-                "Use your passkey": "使用您的通行密钥",
-                "Use your authenticator app": "使用您的身份验证器应用",
-                "Use your password": "使用您的密码",
-
-                "GitHub Mobile": "GitHub Mobile",
-                "Creating a verification request for your GitHub Mobile app.": "为您的 GitHub Mobile 应用创建验证请求。",
-                "We sent you a verification request on your GitHub Mobile app. Enter the digits shown below to enter sudo mode.": "我们向您的 GitHub Mobile 应用发送了一个验证请求。输入下面显示的数字以进入 sudo 模式。",
-                "We could not verify your identity": "我们无法核实您的身份",
-                "Retry": "请重试",
-
-                "Password": "密码",
-                "Forgot password?": "忘记密码？",
-                "Confirm": "确认",
-
-                "Passkey": "通行密钥",
-                "When you are ready, authenticate using the button below.": "准备好后，请使用下面的按钮进行身份验证。",
-                "This browser or device does not fully support passkeys.": "此浏览器或设备不完全支持通行密钥。",
-                "Use passkey": "使用通行密钥",
-
-                "Authentication failed.": "认证失败。",
-                "Retry passkey": "重试通行密钥",
-
-                "Unable to verify with your passkey?": "无法验证您的通行密钥？",
 
     },
     "regexp": [ // 正则翻译
@@ -14209,6 +14212,7 @@ I18N["zh-CN"]["repository/settings/rules"] = { // 仓库设置 - 规则 - 规则
         ...I18N["zh-CN"]["repository-public"]["static"],
         ...I18N["zh-CN"]["repository-settings-menu"]["static"],
         ...I18N["zh-CN"]["orgs-settings-menu"]["static"], // 组织设置
+        ...I18N["zh-CN"]["confirm-access"]["static"],
 
         // 仓库规则集页面 /<user-name>/<repo-name>/rules
         // 规则集 页面 /<user-name>/<repo-name>/settings/rules
@@ -14582,47 +14586,6 @@ I18N["zh-CN"]["repository/settings/rules"] = { // 仓库设置 - 规则 - 规则
                 "No changes have been made": "未作任何更改",
                 "Invalid rules: 'Required status checks'": "无效规则：“必需的状态检查”",
 
-            // 授权访问 sudo 模式身份验证
-                "Confirm access": "授权访问",
-                "Authentication code": "验证码",
-                    "More information about sudo mode authentication": "更多关于 sudo 模式身份验证的信息",
-                "Open your two-factor authenticator (TOTP) app or browser extension to view your authentication code.": "打开您的双重身份验证器 (TOTP) 应用或浏览器扩展以查看您的身份验证码。",
-                "Verify": "验证",
-                "Verify": "验证",
-                "Verifying…": "验证中…",
-                "Your authentication code has been sent.": "您的验证码已发送。",
-
-                "Having problems?": "有问题吗？",
-                "Use your passkey": "使用您的通行密钥",
-                "Use GitHub Mobile": "使用 GitHub Mobile",
-                "Use your authenticator app": "使用您的身份验证器应用",
-                "Send a code via SMS": "通过短信发送验证码",
-                "Resend SMS": "重新发送短信",
-                "Use your password": "使用您的密码",
-
-                "GitHub Mobile": "GitHub Mobile",
-                "When your phone is ready, click the button below.": "当您的手机准备就绪时，请单击下面的按钮。",
-                "Creating a verification request for your GitHub Mobile app.": "为您的 GitHub Mobile 应用创建验证请求。",
-                "We sent you a verification request on your GitHub Mobile app. Enter the digits shown below to enter sudo mode.": "我们向您的 GitHub Mobile 应用发送了一个验证请求。输入下面显示的数字以进入 sudo 模式。",
-                "We could not verify your identity": "我们无法核实您的身份",
-                "Retry": "请重试",
-
-                "We just sent you a message via SMS with your authentication code. Enter the code in the form above to verify your identity.": "我们刚刚通过短信向您发送了一条消息，其中包含您的验证码。在上面的表格中输入验证码以验证您的身份。",
-
-                "Password": "密码",
-                "Forgot password?": "忘记密码？",
-                "Confirm": "确认",
-
-                "Incorrect password.": "密码不正确。",
-
-                "Passkey": "通行密钥",
-                "When you are ready, authenticate using the button below.": "准备好后，请使用下面的按钮进行身份验证。",
-                "Use passkey": "使用通行密钥",
-
-                "Authentication failed.": "认证失败。",
-                "Retry passkey": "重试通行密钥",
-
-                "Unable to verify with your passkey?": "无法验证您的通行密钥？",
 
     },
     "regexp": [ // 正则翻译
@@ -16471,7 +16434,7 @@ I18N["zh-CN"]["session-authentication"] = { // 登录页 包含(/login, /session
             "Check your email for a link to reset your password. If it doesn’t appear within a few minutes, check your spam folder.": "检查您的电子邮件以获取重置密码的链接。如果它在几分钟内没有出现，请检查您的垃圾邮件文件夹。",
             "Return to Sign in": "返回登录",
 
-        // 授权访问 sudo 模式身份验证
+        // ...I18N["zh-CN"]["confirm-access"]["static"], // [留待后期合并] 授权访问 sudo 模式身份验证
             "Confirm access": "授权访问",
             "Signed in as": "登录身份为",
             "Authentication code": "验证码",
