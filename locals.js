@@ -45,7 +45,7 @@ I18N.conf = {
      * 导入仓库 /new/import
      * ...
      */
-    rePagePath: /^\/($|home|dashboard|copilot|signup|login\/oauth|login|logout|sessions?|password_reset|orgs|explore|topics|notifications\/subscriptions|notifications|watching|stars|issues|pulls|search|trending|showcases|new\/(import|project)|new|import|settings\/(profile|admin|appearance|accessibility|notifications|billing|emails|security_analysis|security-log|security|auth|sessions|keys|ssh|gpg|organizations|enterprises|blocked_users|interaction_limits|code_review_limits|repositories|codespaces|deleted_repositories|packages|copilot|pages|replies|installations|apps\/authorizations|reminders|sponsors-log|apps|(?:personal-access-|)tokens|developers|applications\/new|applications|connections\/applications)|settings|installations\/new|marketplace|apps|account\/(organizations\/new|choose|upgrade|billing\/history)|projects|redeem|discussions|events|collections|sponsors|sponsoring|github-copilot\/(signup|free_signup)|codespaces|developer\/register|features|security|sitemap)|^\/users\/[^\/]+\/(projects|packages|succession\/invitation)/,
+    rePagePath: /^\/($|home|dashboard|copilot|signup|login\/oauth|login|logout|sessions?|password_reset|orgs|explore|topics|notifications\/subscriptions|notifications|watching|stars|issues|pulls|search|trending|showcases|new\/(import|project)|new|import|settings\/(profile|admin|appearance|accessibility|notifications|billing|emails|security_analysis|security-log|security|auth|sessions|keys|ssh|gpg|organizations|enterprises|blocked_users|interaction_limits|code_review_limits|repositories|codespaces|deleted_repositories|packages|copilot|pages|replies|installations|apps\/authorizations|reminders|sponsors-log|apps|(?:personal-access-|)tokens|developers|applications\/new|applications|connections\/applications)|settings|installations\/new|marketplace|apps|account\/(organizations\/new|choose|upgrade|billing\/history)|projects|redeem|discussions|events|collections|sponsors|sponsoring|github-copilot\/(signup|free_signup)|codespaces|developer\/register|features|security|sitemap|education)|^\/users\/[^\/]+\/(projects|packages|succession\/invitation)/,
 
     // 仓库路径
     rePagePathRepo: /^\/[^\/]+\/[^\/]+\/(issues|pulls|pull|tree|watchers|stargazers|new|edit|delete|upload|find|wiki|branches|discussions|activity|rules|releases|packages|tags|labels|milestones|compare|commit|blob|blame|actions(\/metrics\/(usage|performance))?|runs|deployments|security|pulse|community|forks|fork|import|graphs\/(contributors|community|traffic|commit-activity|code-frequency)|network$|network\/(dependencies|dependents|updates|members)|settings\/(access|code_review_limits|interaction_limits|branches|branch_protection_rules|tag_protection|rules|actions|hooks|environments|codespaces|pages|security_analysis|dependabot_rules|keys|secrets|variables|installations|notifications)|settings|transfer|projects\/new|pkgs|contribute|subscription|invitations|codespaces|attestations|custom-properties)/,
@@ -317,6 +317,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Runner Groups": "运行器组",
         "Packages": "软件包",
         "Package": "软件包",
+        "Payment Information": "支付信息",
         "Security": "安全",
         "Verified & approved domains": "经验证和批准的域名",
         "Add a Pages verified domain": "添加一个经验证的 GitHub Pages 域名",
@@ -354,6 +355,9 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "Blocked users": "黑名单",
         "New conversation · GitHub Copilot": "新聊天 · GitHub Copilot",
         "Models · GitHub Marketplace": "模型 · GitHub 市场",
+        "GitHub Education": "GitHub 教育",
+        "GitHub Student Developer Pack - GitHub Education": "学生开发包 - GitHub 教育",
+        "Get your GitHub benefits - GitHub Education": "获取福利 - GitHub 教育",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -1357,11 +1361,12 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
          * 正则中的 ?? 前面的字符 重复0次或1次
          * 正则中的 ?: 非捕获符号(即关闭圆括号的捕获能力) 使用方法 (?: 匹配规则) -->该匹配不会被捕获 为 $数字
          */
-        [/(^Updated |^Commits on |^Joined on |on )?(?:(Sun(?:day)?|Mon(?:day)?|Tue(?:sday)?|Wed(?:nesday)?|Thu(?:rsday)?|Fri(?:day)?|Sat(?:urday)?)?,? )?(?:(\d{1,2})(?:st.|nd.|rd.|th.)?)? ?(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?) ?(\d{1,2})?,? (\d{4})?/g, function (all, prefix, week, date1, month, date2, year) {
+        [/(^Updated |^Commits on |^Joined on |on |^Submitted )?(?:(Sun(?:day)?|Mon(?:day)?|Tue(?:sday)?|Wed(?:nesday)?|Thu(?:rsday)?|Fri(?:day)?|Sat(?:urday)?)?,? )?(?:(\d{1,2})(?:st.|nd.|rd.|th.)?)? ?(Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|Sep(?:tember)?|Oct(?:ober)?|Nov(?:ember)?|Dec(?:ember)?) ?(\d{1,2})?,? (\d{4})?/g, function (all, prefix, week, date1, month, date2, year) {
             var prefixKey = {
                 "Updated "   : "更新于 ",
                 "Commits on ": "提交于 ",
                 "Joined on " : "加入于 ",
+                "Submitted ": "提交于 ",
             };
             var weekKey = {
                 "Sun"  : "周日",
@@ -1606,6 +1611,11 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         "or": "或者",
         "Learn more about Git and GitHub": "了解更多关于 Git 和 GitHub 的信息",
 
+        // 教育版
+        "Join GitHub Education!": "加入 GitHub 教育！",
+            "GitHub Education opens doors to new skills, tools, and a collaborative community eager to drive innovation. Join us and build a foundation for your future in technology.": "GitHub 教育为您打开通往新技能、新工具以及渴望推动创新的协作社区的大门。加入我们，为您的技术未来打下基础。",
+        "Join GitHub Education": "加入 GitHub 教育",
+
         // 组织
         // [/You’re an owner of the ([^ ]+) organization!/, "您是 $1 组织的所有者！"],
         // [/Create a repository for ([^ ]+)/, "为 $1 创建仓库"],
@@ -1765,6 +1775,8 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         "followed": "关注了",
         "added a repository to": "已将仓库添加到",
         "contributed to": "贡献给",
+            // 现在会显示拉取请求状态
+            "Merged": "已合并",
 
         "your repository": "您的仓库",
 
@@ -1879,6 +1891,8 @@ I18N["zh-CN"]["page-dashboard"] = { // 已登录的首页 - 仪表板（含组�
         // 继任者相关
         [/You are now the designated successor for ([^ ]+)'s account./, "您现在是 $1 的指定继任者了。"],
         [/You have declined to become the designated successor for ([^ ]+)'s account./, "您已经谢绝了成为 $1 账户指定继任者的邀请。"],
+        // 拉取请求状态
+        [/merged (\d+) commits?/, "合并 $1 个提交"],
     ],
 };
 I18N["zh-CN"]["dashboard"] = I18N["zh-CN"]["page-dashboard"];
@@ -3413,6 +3427,9 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
         ...I18N["zh-CN"]["settings-menu"]["static"],
         ...I18N["zh-CN"]["orgs-settings-menu"]["static"], // 组织设置
 
+        // 顶部提示
+            "Successfully updated billing information.": "成功更新支付信息。",
+
         // 账单和计划 https://github.com/settings/billing/summary
             "Billing summary": "账单摘要",
             "Your next payment": "您的下一次应付款",
@@ -3585,14 +3602,22 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
 
             "First name": "名字",
             "Last name": "姓氏",
+            "Add your business information to show on every invoice": "添加您的企业信息，在每张发票上显示",
             "Address (P.O. box, company name, c/o)": "地址（邮政信箱、公司名称、c/o）",
+            "Address": "地址",
+                "(Street, P.O. box)": "（街道，邮政信箱）",
             "Address line 2 (Apartment, suite, unit)": "地址第 2 行（公寓、套房、单元）",
+            "Address line 2": "地址第 2 行",
+                "(Apartment, suite, unit)": "（公寓、套房、单元）",
             "City": "城市",
             "Postal/Zip code": "邮政编码",
                 "Required for certain countries": "某些国家/地区需要",
+                "(9-digit zip code for US)": "(美国为 9 位邮政编码）",
             "Country/Region": "国家/地区",
                 "Choose your country": "选择您所在的国家/地区",
             "State/Province": "州/省",
+            "VAT/GST ID": "增值税/消费税编号",
+            "Save billing information": "保存账单信息",
             "You have not added any billing information.": "您尚未添加账单方式。",
 
             "Payment method": "支付方式",
@@ -3620,6 +3645,17 @@ I18N["zh-CN"]["settings/billing"] = { // 设置 - 账单和计划
             "For your security, do not include any confidential or financial information (like credit card numbers).": "为了您的安全，请勿包含任何机密或财务信息（如信用卡号）。",
             "Full business name or address of record": "企业全称或记录地址",
             "Save contact information": "保存联系信息",
+
+            "Invoice": "发票",
+                "Receive an invoice for your GitHub purchases": "接收 GitHub 购物发票",
+
+                "The data from Billing Information, such as your address and VAT/GST ID will appear on your invoices.": "账单信息中的数据，如您的地址和增值税/消费税 ID，将显示在您的发票上。",
+                "Update your information displayed on your invoices in the": "更新发票上显示信息中的",
+                "billing information section": "账单信息栏",
+
+                "Automatically receive an invoice alongside the payment receipt": "在收到付款收据的同时自动接收发票",
+                    "* Enables invoices for all NEW payments.": "* 为所有新付款启用发票。",
+                "Save invoice preference": "保存发票首选项",
 
         // 支付方式 https://github.com/settings/billing/payment
             "/ Payment method": "/ 支付方式",
@@ -4704,7 +4740,7 @@ I18N["zh-CN"]["settings/copilot"] = { // 设置 - GitHub Copilot
                     "Allow GitHub, its affiliates and third parties to use my data, including Prompts, Suggestions, and Code Snippets, for AI model training. More information in the": "允许GitHub、其关联公司和第三方使用我的数据，包括提示、建议和代码片段，以训练 AI 模型。更多信息请查看",
                 "Copilot access to Bing": "访问必应",
                     "Copilot can answer questions about new trends and give improved answers.": "Copilot 可以回答有关新趋势的问题，并给出改进的答案。",
-                    "See Microsoft Privacy Statement": "请参阅微软隐私声明 ",
+                    "See Microsoft Privacy Statement": "请参阅微软隐私声明",
 
                     "GitHub Copilot will answer questions about new trends and give improved answers": "GitHub Copilot 将回答有关新趋势的问题并给出改进的答案",
                     "GitHub Copilot won't answer questions about new trends and give improved answers": "GitHub Copilot 将不会回答有关新趋势的问题并给出改进的答案",
@@ -8558,6 +8594,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "closed this": "已关闭",
             "reopened this": "已重新打开",
             "closed this by deleting the head repository": "已关闭因仓库已删除",
+            "Requested changes": "请求更改",
 
             //
             "This branch has not been deployed": "该分支尚未部署",
@@ -8825,6 +8862,7 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "Edit file": "编辑文件",
             "Delete file": "删除文件",
             "Open in desktop": "在 GitHub Desktop 中打开",
+            "Copilot is not available for this file type": "Copilot 不支持此文件类型",
 
             // 上一页
             "You are viewing the earliest commit": "您正在查看最早的提交",
@@ -8928,6 +8966,13 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             "File renamed without changes.": "文件仅重命名，内容没有更改。",
             "File renamed without changes": "文件仅重命名，内容没有更改",
             "Binary file not shown.": "不显示二进制文件。",
+            "Display the source diff": "显示源差异",
+            "Display the rich diff": "显示富差异",
+                "Added": "增加",
+                "Deleted": "删除",
+                "2-up": "并排",
+                "Swipe": "拖拽",
+                "Onion Skin": "渐变",
 
             "These merge commits were added into this branch cleanly.": "这些合并提交已被干净利落地添加到该分支中。",
                 "There are no new changes to show.": "没有任何新的变化。",
@@ -8939,6 +8984,17 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
             // 代码评论
                 "Comment on lines": "评论行",
                 "Commenting on lines": "评论行",
+            
+            // Copilot 菜单
+                "Ask Copilot about this diff": "与 Copilot 讨论此差异",
+                    "Copilot is not available for this file type": "Copilot 不支持此文件类型",
+                "Ask Copilot about this file-diff": "与 Copilot 讨论此文件差异",
+                "Copilot menu": "Copilot 菜单",
+                    "Explain": "解释",
+                    "Attach to current thread": "附加到当前主题",
+                
+                "Select files to discuss": "选择文件讨论",
+                    "Copilot is not available for this file": "Copilot 不支持此文件",
 
             // 建议更改
                 "Suggested change": "建议更改",
@@ -9067,9 +9123,11 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
         [/(\d+) review requesting changes by reviewers? with write access./, "$1 个请求审查更改由具有写入权限的审查者进行审查。"],
         [/(\d+) approvals?/, "$1 项批准"],
         [/(\d+) reviews? requesting changes by reviewers with write access/, "$1 项审查，要求有写入权限的审查者进行更改"], // 拉取请求
+        [/(\d+) changes? requested by reviewers with write access/, "具有写入权限的审查者提出 $1 项更改请求"],
         [/(\d+) changes? requested/, "$1 项更改请求"],
         [/This pull request closes issue (#\d+)./, "该拉取请求将关闭议题 $1。"], // 死活不翻译
         [/([\d,]+) additions, ([\d,]+) deletions not shown because the diff is too large. Please use a local Git client to view these changes./, "$1 处增加，$2 处删除未显示，因为差异太大。请使用本地 Git 客户端查看这些更改。"],
+        [/(\d+) requested change/, "$1 项请求更改"],
 
         // 状态
         [/branch (\d+) times, most recently from/, "分支 $1 次，最近一次从"],
@@ -9762,6 +9820,9 @@ I18N["zh-CN"]["repository/blob"] = { // 仓库 - 浏览代码
 
                 "Executable File": "可执行文件",
                 "executable file": "可执行文件",
+
+                // Copilot
+                "Ask Copilot about this file": "与 Copilot 讨论此文件",
 
                 "Raw": "源码",
                 // 文件复制图标
@@ -17823,6 +17884,7 @@ I18N["zh-CN"]["login/oauth"] = { // 应用授权
 
         // 第五页 即将跳转到 重定向页面
             "You are being redirected to the authorized application.": "您将被重定向到授权的应用。",
+            "If your browser does not redirect you back, please visit": "",
             "If your browser does not redirect you back, please": "如果您的浏览器没有将您重定向回来，请",
             "click here": "点击这里",
             "to continue.": "继续。",
@@ -22749,4 +22811,185 @@ I18N["zh-CN"]["sitemap"] = { // 网站地图页，仅匹配公共部分
         ...I18N["zh-CN"]["homepage"]["static"],
     },
     "regexp":[],
+};
+
+I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
+    "static": {
+        ...I18N["zh-CN"]["homepage"]["static"],
+        // 顶栏
+            "Students": "学生",
+            "Teachers": "教师",
+            "Schools": "学校",
+        
+        "GitHub Education": "GitHub 教育",
+        "Empowering the next generation of developers": "增强新一代开发人员的能力",
+            "GitHub Education bridges the gap between coding education and a tech career, and is accessible to everyone globally at no cost.": "GitHub 教育在编程教育和技术职业之间架起了一座桥梁，全球每个人都可以免费使用。",
+        "Join GitHub Education": "加入 GitHub 教育",
+        // 教育包申请 https://education.github.com/pack
+            // 右上角菜单
+                "Your benefits application": "我的福利",
+                "Your GitHub.com profile": "我的个人资料",
+                "Education Docs": "教育文档",
+                "Education Support": "教育支持",
+                "Sign out of GitHub Education": "退出 GitHub 教育",
+            // 顶部提示
+                "We're still processing your application. Once this is complete you will have access to the student developer pack offers.": "我们仍在处理您的申请。一旦处理完毕，您就可以获得学生开发包优惠。",
+
+            "GitHub Student Developer Pack": "GitHub 学生开发包",
+                "Learn to ship software like a pro.": "学习如何像专业人士一样开发软件。",
+                "There's no substitute for hands-on experience. But for most students, real world tools can be cost-prohibitive. That's why we created the GitHub Student Developer Pack with some of our partners and friends.": "没有替代品可以代替亲身实践的经验。但对于大多数学生来说，现实世界中的工具可能成本过高。这就是为什么我们与一些合作伙伴和朋友一起创建了GitHub 学生开发包。",
+            "Sign up for Student Developer Pack": "获取学生包",
+            "Love the pack? Spread the word": "喜欢吗？分享给朋友！",
+            // 后续内容完全用不到直接不翻
+
+            // https://education.github.com/discount_requests/application
+                "Benefits application": "优惠",
+                "Access free GitHub Education benefits": "获取免费 GitHub 教育福利",
+                    "Complete the fields below to unlock tools and resources for your educational journey": "填写以下字段，为您的教育之旅解锁工具和资源",
+                
+                "Select your role in education": "选择身份",
+                    "Teacher": "教师",
+                    "Student": "学生",
+                    "School": "学校",
+
+                    // 学生
+                    "Enhance your tech skills with real-world tools": "利用现实世界中的工具提高您的技能",
+                        "STUDENT": "学生",
+                            "FREE GitHub Pro while you are a student": "学生期间免费使用 GitHub 专业版",
+                            "Valuable GitHub Student Developer Pack partner offers": "宝贵的 GitHub 学生开发包合作伙伴优惠",
+                            "GitHub Campus Expert training for qualified applicants": "为合格申请者提供 GitHub 校园专家培训",
+                        "To qualify for student benefits, you must:": "您必须具备以下条件：",
+                            "Have a GitHub account.": "持有 GitHub 账号。",
+                            "Be at least 13 years old.": "大于 13 岁。",
+                            "Be currently enrolled in a degree or diploma granting course of study from a recognized educational institution.": "目前就读于认可教育机构的学位或文凭课程。",
+                            "Be able to provide documentation from your school which demonstrates your current student status.": "能够提供学校出具的证明您当前学生身份的文件。",
+                        "Before you begin:": "在开始之前：",
+                            "Check that you are using a": "检查您使用的是",
+                                "supported browser": "受支持的浏览器",
+                                ", and that location services are not blocked by your browser or platform.": "，且您的浏览器或平台未阻止定位服务。",
+                            "Complete your GitHub account": "在 GitHub 帐户",
+                                "billing information": "账单信息",
+                                "with your full legal name as it appears on your academic affiliation documentation. (You do not have to add a payment method.)": "中填写您的法定全名，与您的学历证明材料上的姓名一致。(无需添加支付方式）。",
+                            "Verify": "验证",
+                                "your academic email address on your GitHub account, if your school provides one.": "您的教育邮箱于 GitHub，如果您的学校提供。",
+                            "Secure your GitHub account with": "保护您的 GitHub 账户安全，使用",
+                                "two-factor authentication": "双重身份验证",
+                                ". (We recommend using the": "。（我们推荐使用",
+                                "app.)": "。）",
+                            "Personalize": "个性化",
+                                "your public GitHub Profile with your photo, your name, your pronouns, and more.": "您的 GitHub 简介，使用照片、姓名、代词等。",
+                            "Generate a README for your public GitHub Profile,": "为您的公共 GitHub 简介生成 README，",
+                                "customize it with your interests": "根据您的兴趣进行定制",
+                                ", and publish it for the world to see.": "，然后公开。",
+                        "Offer availability:": "可提供优惠：",
+                            "All partner offers are subject to the partner company's terms and conditions and may not be available in all regions.": "所有合作伙伴优惠均受合作伙伴公司的条款和条件限制，可能不适用于所有地区。",
+
+                        "Application": "申请",
+                            "Required fields are marked with an asterisk": "带星号的为必填项",
+                        "What is the name of your school?": "您的学校名称",
+                            "Note:": "注：",
+                            "If your school is not listed, then enter the full school name and continue. You will be asked to provide further information about your school on the next page.": "如果您的学校不在列表中，请输入学校全名并继续。下一页将要求您提供有关贵校的更多信息。",
+                            "A minimum of two characters is required to find your school.": "查找学校至少需要两个字符。",
+                            // 窗口
+                            "We require applicants of": "我们要求",
+                            "to use one of these school-issued email addresses to apply:": "的申请人使用其中一个学校发布的电子邮件地址进行申请：",
+                            "add and verify your": "添加并验证",
+                            "school-issued email address": "学校提供的电子邮件地址",
+                            "in your account settings – or a contact email if you do not have one. Once your email is verified, refresh this page.": "到您的 GitHub 账户。一旦您的电子邮件通过验证，请刷新此页面。",
+                            "Add an email address": "添加电子邮件",
+                            // 验证通过
+                            "You have verified the email address": "您已在 GitHub 上验证邮件",
+                            "on your GitHub account. That academic domain is associated with the school": "。该域名属于：",
+                            "Select this school": "选择此学校",
+                            "We chose this school based on your email. If this isn't your school, please": "我们根据您的电子邮件选择了这所学校。如果这不是您的学校，请在账户设置中",
+                            "add and verify another": "添加并验证其他",
+                            "in your account settings - or select another school.": "- 或选择其他学校。",
+                        "When you click \"Continue\" you will be prompted to share your location with us. Providing your current location helps us verify your affiliation with your chosen school.": "点击 “继续 ”后，系统会提示您与我们共享您的位置。提供您的当前位置有助于我们核实您与所选学校的关联。",
+                        "Continue": "继续",
+                        
+                        // 提交历史
+                            "You've already submitted": "您已提交申请",  // 后续正则
+
+                            "rejected": "驳回",
+                                "Unfortunately, we weren't able to approve your educational discount request for": "很遗憾，我们无法批准您的教育折扣申请：",
+                                "What happened?": "发生了什么？",
+                                    "Suggested proof to expedite your approval:": "建议提供证明，以加快审批：",
+                                "Have questions?": "有疑问？",
+                                    "Please seek help via our": "请通过我们的",
+                                    "Student Developer Pack Application FAQ": "学生开发包申请常见问题",
+                                    "or visit the": "或访问",
+                                    "GitHub Education Community.": "GitHub 教育社区。",
+                            
+                            "pending": "排队",
+                    
+                        "Get help": "获取帮助",
+                            "Common questions about applying for your academic discount.": "关于申请学术折扣的常见问题。",
+                        // 学生
+                            "Learn about GitHub's programs": "了解 GitHub 计划",
+                        // 教师
+                            "Discover GitHub's resources": "探索 GitHub 资源",
+                    
+            // https://education.github.com/discount_requests/数字/additional_information
+                "Upload proof": "上传证明",
+
+                "Upload proof of your academic status": "上传学籍证明",
+                "We need a little more proof to verify your academic status.": "还需要一点证明验证学籍状态。",
+                "What we need to see:": "我们需要查看：",
+                    "Your student ID": "您的学生证",
+                        "Your ID should": "您的学生证需要",
+                        "include a date": "包含日期",
+                        "that verifies your current enrollment. Make sure the image is clear and easy to read; if it looks blurry, please take a new photo and upload it again.": "，以证明您当前的注册情况。请确保图像清晰易读；如果图像模糊，请重新拍摄照片并上传。",
+                    "Or another form of proof": "或其他证明",
+                        "If you don't have a student ID, or it doesn't include a date, you can upload a letter on school letterhead or any documentation": "如果您没有学生证，或者学生证上没有日期，您可以上传一封印有学校信笺抬头的信件或任何能证明您",
+                        "with a date": "当前注册日期",
+                        "that demonstrates your current enrollment.": "的文件。",
+                    
+                    "Please upload proof of your academic status.": "请上传您的学籍证明。",
+                        "Snap a picture of your qualifying proof of current academic status using your HD webcam or smartphone camera.": "使用高清摄像头或智能手机摄像头拍下您当前学历的合格证明照片。",
+                        "Take a picture": "拍照",
+                            "Take photo": "拍照",
+                            "Reset": "重置",
+                            "Error: Could not access your webcam": "错误：无法访问您的网络摄像头",
+                            "camera2 1, facing front": "镜头2 1，前摄",
+                            "camera2 0, facing back": "镜头2 0，后摄",
+                            "Uploading…": "上传中…",
+                            "Thanks for uploading your photo. Please complete the form and submit when you're ready.": "感谢您上传照片。请填写表格并提交。",
+                            // 未拍照直接提交
+                                "Please upload proof of your current school affiliation": "请上传您目前所在学校的证明",
+                                "Please upload proof of your current school affiliation that is less than 1MB in size": "请上传小于 1MB 的照片",
+                                "Binary data can't be blank": "二进制数据不能为空",
+                    
+                    "Please note, your request cannot be edited once it has been submitted, so please verify your details for accuracy before sending them to us. After clicking \"Process my application\", please wait as processing can take several seconds.": "请注意，您的申请一经提交便无法编辑，因此在发送给我们之前，请核实您的详细信息是否准确。点击 “处理我的申请 ”后，请稍候，因为处理过程可能需要几秒钟。",
+                        "Process my application": "处理申请",
+                        "Processing your application": "处理中",
+                        "Processing information...": "处理中...",
+                    
+                    // 上传失败
+                        "Your application cannot be reviewed until you fix the following:": "您的申请将不被审查直到解决以下问题：",
+                            "You must configure your browser and operating system to allow location access. You may not use a VPN. If you believe that our information about your school is incomplete or incorrect, then please select ‘My selected school has incorrect or incomplete information e.g. domains or campus location’ option when submitting a GitHub Education support ticket.": "您必须配置您的浏览器和操作系统以允许位置访问。您不得使用VPN。如果您认为我们关于您学校的资料不完整或不正确，请在提交GitHub 教育支持工单时选择“我选择的学校信息有误或不完整，例如域名或校园位置”选项。",
+                            "Please use your device camera to submit your academic affiliation documents. If you’re having trouble using your device camera, please allow camera access for the application website on your browser. The steps for this will vary depending on which browser you are using. Information on browsers supported by GitHub can be found": "请使用设备摄像头提交您的学术关系文件。如果您在使用设备摄像头时遇到困难，请在浏览器上允许摄像头访问申请网站。具体步骤视您使用的浏览器而定。有关 GitHub 支持的浏览器信息，请点击",
+                                "here": "此处",
+                                ". You may also try applying from a different computer or mobile device.": "。您也可以尝试换一台电脑或移动设备申请。",
+                            "Please ensure that your academic affiliation document contains your last name exactly as it appears in your": "请确保您的学籍文件中的姓氏与",
+                                "GitHub billing information": "GitHub 账单信息",
+                                ". If you have only a single legal name, enter it in both the first and last name fields of your GitHub billing information.": "中的姓氏完全一致。如果您只有一个合法姓名，请在 GitHub 账单信息的姓和名栏中同时输入。",
+                            "The image you selected does not appear to contain your school name. Your complete school name must appear in your document, not only the school logo. You may include multiple documents together. If your official document is not in English then you may photograph the original next to an English translation.": "您选择的图片似乎不包含您的学校名称。文件中必须包含完整的校名，而不仅仅是校徽。您可以将多份文件放在一起。如果您的官方文件不是英文的，您可以将原件与英文翻译件放在一起拍照。",
+                            "Please ensure that your academic affiliation document contains your first name exactly as it appears in your": "请确保您的学术关系文件中的姓名与",
+                                //"GitHub billing information": "",
+                                ". Variations of your name and nicknames are unacceptable.": "中的姓名完全一致。请勿使用不同的姓名和昵称。",
+                            "You are unlikely to be verified until you have completed your": "在完成",
+                                "GitHub user profile": "GitHub 用户资料",
+                                "with your full name exactly as it appears in your academic affiliation document. Please do not use a variation of your name or a nickname. Once you have updated your profile information log out and log back into GitHub before re-applying.": "之前，您不可能通过验证。请不要使用姓名的变体或昵称。更新个人档案信息后，请退出并重新登录 GitHub，然后再重新申请。",
+            // https://education.github.com/discount_requests/数字/completed 成功
+                "Get benefits": "获取福利",
+
+                "Thanks for submitting!": "感谢提交！",
+                    "Be sure to check your email. If you don't hear from us within the hour, you should receive an email from us in less than": "请务必查看您的电子邮件。如果您在一小时内没有收到我们的回复，您应该会在",
+                    "5 days": "5 天内",
+                    ". Have an Octotastic day!": "收到我们的电子邮件。祝您度过愉快的一天！",
+    },
+    "regexp":[
+        [/(\d+) requests?/, "$1 次"],
+        //[/Submitted (.+)/, "提交于 $1"],
+    ],
 };
