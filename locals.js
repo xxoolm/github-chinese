@@ -358,6 +358,7 @@ I18N["zh-CN"]["title"] = { // 标题翻译
         "GitHub Education": "GitHub 教育",
         "GitHub Student Developer Pack - GitHub Education": "学生开发包 - GitHub 教育",
         "Get your GitHub benefits - GitHub Education": "获取福利 - GitHub 教育",
+        "Signup to GitHub Copilot": "注册 GitHub Copilot",
     },
     "regexp": [ // 正则翻译
         [/Authorized OAuth Apps/, "授权的 OAuth 应用"],
@@ -1294,6 +1295,28 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
 
             "Tell us what you liked or what could be better": "告诉我们您喜欢什么或可以改进的地方",
 
+            // 响应状态
+                "Copilot is responding…": "Copilot 响应中…",
+                "creating plan": "创建计划中",
+                "getting data": "获取数据中",
+                "Using the GitHub API to search pull requests": "正在使用 GitHub API 搜索拉取请求",
+                "Using the GitHub API to get latest release": "正在使用 GitHub API 获取最新发行版",
+                    "Copilot used the": "Copilot 已使用",
+                    "Issue API": "议题 API",
+                    "tool": "工具",
+            
+            // 引用
+                "More reference options": "更多引用选项",
+                    "Attach to chat": "附加至聊天",
+                    "Raw": "源码",
+                    "Show content": "显示内容",
+                        "above": "上方",
+                        "below": "下方",
+                    "Reference details": "引用信息",
+                        "contributor": "贡献者",
+                        "contributors": "贡献者",
+                        "updated": "更新于",
+
             "Please don’t include sensitive, confidential, or personal data. Your anonymous feedback helps us improve our services in line with our": "请不要包含敏感、机密或个人数据。您的匿名反馈有助于我们改进服务，根据",
             "Privacy Policy": "隐私政策",
             "Send": "发送",
@@ -1309,6 +1332,12 @@ I18N["zh-CN"]["public"] = { // 公共区域翻译
     "regexp": [ // 正则翻译
         // Copilot 窗口
         [/Chatting about ([^ ]+)/, "关于 $1 的对话"],
+        //[/Public code references from 4 repositories/, ""],
+        [/Public code references from (\d+) repositor(y|ies)/, "公共代码，引用自 $1 个仓库"],
+        [/(\d+) references?/, "$1 条引用"],
+        [/(\d+) lines? \((\d+) loc\) ·/, "$1 行（$2 非空行）·"],  // loc = 代码行（line of code）= 行数 - 空行数（lines - blank lines）
+        [/Using the GitHub API to search for issues assigned to user ([^ ]+)/, "使用 GitHub API 搜索分配给用户 $1 的议题"],
+        [/Chatting with (\d+) attachments?/, "附件 $1 个"],
         /**
          * 匹配时间格式
          *
@@ -3283,6 +3312,7 @@ I18N["zh-CN"]["settings/accessibility"] = { // 设置 - 无障碍
                 "Command mode": "命令模式",
                     "control + shift + k (default)": "control + shift + k (默认)",
                 "Save keyboard shortcut preferences": "保存键盘快捷键首选项",
+                "Save command palette preferences": "保存命令面板首选项",
 
             // 顶部提醒
             "Keyboard shortcut preference successfully saved.": "键盘快捷键首选项已成功保存。",
@@ -8927,6 +8957,9 @@ I18N["zh-CN"]["repository/pull"] = { // 仓库 - 某个拉取请求页面
 
             "files viewed": "查看过的文件",
                 "Marking files as viewed can help keep track of your progress, but will not affect your submitted review": "将文件标记为已查看可以帮助您跟踪进度，但不会纠正您提交的审查",
+            // 咨询 Copilot
+                "Loading Copilot features…": "加载 Copilot 功能…",
+                "Copilot is not available for this pull request": "Copilot 不可用于此拉取请求",
             "Review in codespace": "在代码空间中审查",
             // "Review changes": "审查更改", // 使用 Selector 规则翻译
                 // 下拉
@@ -17182,6 +17215,7 @@ I18N["zh-CN"]["search"] = { // 搜索页面
         "More than": "多余",
         "ms": "毫秒", // 时间，前面"结果"走正则匹配
         "s": "秒", // 同上
+        "in": "在",
         "View topic": "查看主题", //搜索结果中的主题
         // 搜索 https://github.com/search >>>>>>>>>>>>>>>>>>>>>>>>
             "Search GitHub": "在 GitHub 上搜索",
@@ -17884,9 +17918,10 @@ I18N["zh-CN"]["login/oauth"] = { // 应用授权
 
         // 第五页 即将跳转到 重定向页面
             "You are being redirected to the authorized application.": "您将被重定向到授权的应用。",
-            "If your browser does not redirect you back, please visit": "",
+            "If your browser does not redirect you back, please visit": "如果您的浏览器没有将您重定向回来，请",
             "If your browser does not redirect you back, please": "如果您的浏览器没有将您重定向回来，请",
             "click here": "点击这里",
+            "this setup page": "点击这里",
             "to continue.": "继续。",
             "would like permission to:": "希望获得以下许可：",
             "Know which resources you can access": "了解您可以访问哪些资源",
@@ -21802,15 +21837,20 @@ I18N["zh-CN"]["github-copilot/signup"] = { // GitHub Copilot 个人版获取页�
 
         // https://github.com/github-copilot/signup
            "GitHub Copilot Individual": "GitHub Copilot 个人版",
-           "The world's most widely adopted AI developer tool.": "世界上采用最广泛的人工智能开发工具。",
-           "GitHub Copilot is powered by generative AI to help you code faster and happier!": "GitHub Copilot 是由生成式 AI 驱动的，旨在帮助您更快乐、更高效地编码！",
+           //"The world's most widely adopted AI developer tool.": "世界上采用最广泛的人工智能开发工具。",
+           //"GitHub Copilot is powered by generative AI to help you code faster and happier!": "GitHub Copilot 是由生成式 AI 驱动的，旨在帮助您更快乐、更高效地编码！",
+           "For developers who want unlimited access to GitHub Copilot.": "适用于希望无限制访问 GitHub Copilot 的开发人员。",
            "Start your 30-day free trial": "开始 30 天免费试用",
                //"GitHub Copilot uses the GPT-3.5 Turbo model to offer coding suggestions.": "GitHub Copilot 使用 GPT-3.5 Turbo 模型提供编码建议。",
-               "Chat with Copilot for assistance on a wide variety of scenarios, such as project-specific code explanations or help with debugging": "与 Copilot 聊天以获取有关各种场景的帮助，例如特定于项目的代码解释或调试帮助",
-               "Get code suggestions as you type in more than a dozen coding languages, including Python, JavaScript, TypeScript, Go, and Ruby": "支持超过十种编程语言的代码建议，包括 Python、JavaScript、TypeScript、Go 和 Ruby。",
-               "Plugs into IDEs, including VS Code, Visual Studio, JetBrains IDEs, and Neovim": "可以与包括 VS Code、Visual Studio、Neovim 和 JetBrains 在内的集成开发环境（IDE）配合使用",
-               "Sign up for an annual subscription and get two months free!": "注册年度订阅，可享受两个月免费福利。",
-               "Cancel anytime before the trial ends to avoid getting billed": "在试用期结束前随时取消，以避免收费。",
+               //"Chat with Copilot for assistance on a wide variety of scenarios, such as project-specific code explanations or help with debugging": "与 Copilot 聊天以获取有关各种场景的帮助，例如特定于项目的代码解释或调试帮助",
+               //"Get code suggestions as you type in more than a dozen coding languages, including Python, JavaScript, TypeScript, Go, and Ruby": "支持超过十种编程语言的代码建议，包括 Python、JavaScript、TypeScript、Go 和 Ruby。",
+               //"Plugs into IDEs, including VS Code, Visual Studio, JetBrains IDEs, and Neovim": "可以与包括 VS Code、Visual Studio、Neovim 和 JetBrains 在内的集成开发环境（IDE）配合使用",
+               //"Sign up for an annual subscription and get two months free!": "注册年度订阅，可享受两个月免费福利。",
+               "Copilot Pro includes everything you get for free, plus:": "Copilot Pro 包括免费版所有内容，此外还有：",
+                   "Unlimited code completions and chat interactions": "无限代码完成和聊天互动",
+                   "Access to more models, like OpenAI o1 and Gemini 1.5 Pro": "访问更多模型，如 OpenAI o1 和 Gemini 1.5 Pro",
+                   "Works in GitHub Mobile, CLI, and Windows Terminal": "可在 GitHub 移动端、CLI 和 Windows 终端中使用",
+                   "Cancel anytime before the trial ends to avoid getting billed": "在试用期结束前随时取消，以避免收费。",
 
            "Pay frequency after trial": "试用结束后付费频率",
                "Monthly plan": "月度计划",
@@ -22720,6 +22760,8 @@ I18N["zh-CN"]["copilot"] = {
 
             // 时间
                 "Today": "今天",
+                "Yesterday": "昨天",
+                "Last 30 days": "最近 30 天",
 
             // 无对话
             "No conversations yet": "还没有对话",
@@ -22910,6 +22952,11 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                         // 提交历史
                             "You've already submitted": "您已提交申请",  // 后续正则
 
+                            "approved": "批准",
+                                "Congrats! Your request for": "恭喜！您的申请",
+                                "was approved and your benefits will be available": "已获批准，福利将很快发放。",
+                                "soon": "常见问题", // 该处链接指向 https://github.com/orgs/community/discussions/111352#user-content-how-long-after-ive-been-approved-will-i-receive-my-academic-benefits
+                                
                             "rejected": "驳回",
                                 "Unfortunately, we weren't able to approve your educational discount request for": "很遗憾，我们无法批准您的教育折扣申请：",
                                 "What happened?": "发生了什么？",
@@ -22987,9 +23034,131 @@ I18N["zh-CN"]["education"] = { // 教育页面，申请学生包会用到
                     "Be sure to check your email. If you don't hear from us within the hour, you should receive an email from us in less than": "请务必查看您的电子邮件。如果您在一小时内没有收到我们的回复，您应该会在",
                     "5 days": "5 天内",
                     ". Have an Octotastic day!": "收到我们的电子邮件。祝您度过愉快的一天！",
+                
+            // https://education.github.com/onboardings/new 申请批准后出现
+                "Welcome to GitHub Education!": "欢迎来到 GitHub 教育！",
+                    "GitHub Education offers resources and programs to help students achieve their career goals.": "GitHub 教育提供各种资源和计划，帮助学生实现职业目标。",
+                    "To get started, please answer two questions so we can add a learning path to your Education dashboard to help you with your goals.": "要开始学习，请回答两个问题，以便我们在您的教育仪表板上添加学习路径，帮助您实现目标。",
+                
+                "Question 1 of 2": "问题 1/2",
+                    "In the next 4-6 months, which of the following are you hoping to accomplish? Select two that apply best.": "在未来 4-6 个月内，您希望实现以下哪些目标？请选择最适合的两项。",
+                        "Understanding how to use GitHub": "了解如何使用 GitHub",
+                        "Refining my skills in a particular topic (coding, gaming, design, big data, artifical intelligence, etc.)": "提高我在某一特定领域（编码、游戏、设计、大数据、人工智能等）的技能",
+                        "Connecting with other students who have similar interests": "与其他兴趣相投的学生建立联系",
+                        "Developing career readiness skills": "培养职业准备技能",
+                        "Two selections are required to continue.": "必须选两项。",
+                "Question 2 of 2": "问题 2/2",
+                    "Which topics are of interest to you? Select all that apply.": "您对哪些主题感兴趣？请选择所有适用选项。",
+                        "GitHub features and products": "GitHub 功能和产品",
+                        "Building a professional identity on GitHub": "在 GitHub 上打造专业身份",
+                        "Understanding emerging technologies in a particular field of interest (web development, gaming, design, data, engineering, robotics, etc.)": "了解特定兴趣领域（网络开发、游戏、设计、数据、工程、机器人技术等）的新兴技术",
+                        "Finding people, projects, and communities to connect with": "寻找可以联系的人、项目和社区",
+                        "Speaking at a conference": "在会议上发言",
+                        "Gaining skills to start a great career": "掌握技能，开始美好的职业生涯",
+                "Skip this question": "跳过",
+
+                "Here's our recommendation!": "这是我们的推荐！",
+                    "Continue with our recommended learning path for you, or select another one. Based on your selection,": "继续我们为您推荐的学习路径，或选择其他路径。根据您的选择，",
+                    "we will display a learning path on your dashboard": "我们将在您的仪表板上显示学习路径，",
+                    "to help you get started.": "帮助您开始学习。",
+
+                    "Get Started with GitHub": "GitHub 入门",
+                        "With this learning path, you will learn how to make your first profile README and find other student repositories.": "通过本学习路径，您将学会如何制作第一个配置文件 README 和查找其他学生资源库。",
+                    "Recommended": "推荐",
+                    "GitHub Deep Dive": "深入了解 GitHub",
+                        "Go deeper on how to use codespaces and the GitHub flow to create a web application.": "深入了解如何使用代码空间和 GitHub 流程创建网络应用程序。",
+                    "Continue to Dashboard": "在仪表板继续",
+            
+            // https://education.github.com/learner/learn
+                // 顶部提示
+                "Your onboarding preferences have been saved!": "您的入职首选项已保存！",
+                // 左侧
+                    "Your request was approved.": "您的申请已批准。",
+                        "Your benefits will be available soon.": "您的福利即将发放。",
+
+                    "Learn new skills": "学习新技能",
+                        "Access learning resources from GitHub Education.": "从 GitHub 教育获取学习资源。",
+                    "Find opportunities": "寻找机遇",
+                        "Power up your skillset with real-world projects.": "通过实际项目增强您的技能。",
+                    "Get connected": "获得联系",
+                        "Discover other learners and build your network.": "发现其他学习者，建立自己的网络。",
+                // 中间
+                    "Learning path": "学习途径",
+                        "Intro to GitHub": "GitHub 介绍",
+                            "GitHub flow is a lightweight, branch-based workflow. In this Experience you'll learn the basics of the GitHub Flow including creating and making changes to branches within a repository, as well as creating and merging pull requests. The GitHub flow is useful for everyone, not just developers.": "GitHub 工作流是一种基于分支的轻量级工作流。在本体验中，您将学习 GitHub 工作流的基础知识，包括创建和修改版本库中的分支，以及创建和合并拉取请求。GitHub 工作流不仅对开发人员有用，对每个人都有用。",
+                            "Go to Intro to GitHub": "前往 GitHub 介绍",
+                        "Primer: Codespaces": "入门：代码空间",
+                            "Wondering how to get started with Codespaces? This Primer makes it easy by giving you the templates, videos and step-by-step resources you need to get you started running, testing, debugging and pushing code using this instant cloud developer environment.": "想知道如何开始使用代码空间吗？本入门指南为您提供模板、视频和分步资源，让您轻松开始运行、测试、调试和推送代码。",
+                            "Go to Primer: Codespaces": "前往入门：代码空间",
+                    "Not what you were looking for? Check out our": "还没有找到您想要的？请查看我们的",
+                        "other learning paths.": "其他学习路径。",
+                    
+                    "Student Developer Pack offers": "学生开发包提供",
+                        "Your Student Developer Pack will be ready soon!": "您的学生开发包即将就绪！",
+                            "We will notify you via email when your": "我们将通过电子邮件通知，当您可以使用",
+                                "Experiences": "体验",
+                                "offers": "优惠",
+                                "become": " ",
+                                "available to you.": "时。",
+                // 右侧
+                    // 右上角图标菜单
+                    "Update your location": "更新您的位置",
+
+                    // 看板
+                    "Enabling Copilot": "启用 Copilot",
+                        "To ensure your free Copilot benefit is enabled, redeem by going to this link.": "要确保您的免费 Copilot 优惠已启用，请访问此链接进行兑换。",
+
+                    "Updates in Learn New Skills": "学习新技能的更新内容",
+                        "No new updates": "无更新",
+                    
+                    "Claimed offers": "已申请优惠",
+                        "Your explored offers failed to load, please refresh the page to see this content.": "加载失败，请刷新页面以查看此内容。",
+                    
+            // https://education.github.com/learner/opportunities
+                "Community Exchange": "社区交流",
+                    "Community Exchange is a collection of student repositories for teaching, learning and collaborating.": "社区交流是一个用于教学、学习和合作的学生资源库。",
+                    "Go to Community Exchange": "前往社区交流",
+                "Updates in Find Opportunities": "寻找机遇的更新内容",
+            
+            // https://education.github.com/learner/connect
+                "Events": "事件",
+                    "View more events": "查看更多",
+                    "See more": "详情",
+                "GitHub Education Live": "GitHub 教育直播",
+                    "Go to Twitch": "前往 Twitch",
+
+                // 右侧
+                    "Updates in Get Connected": "获得联系更新内容",
+                    "Campus Expert": "校园专家",
+                        "Campus Experts are student leaders that strive to build diverse and inclusive technical communities.": "校园专家是学生领袖，他们努力建设多元化和包容性的技术社区。",
+
+                        "Follow your Expert": "关注专家",
+                        "Follow student leaders trained by GitHub to get help with hackathons & events": "关注由 GitHub 培训的学生领袖，在黑客马拉松和活动中获得帮助",
+                    
+                    "Education blog": "教育博客",
+                        "View more": "查看更多",
+                     
     },
     "regexp":[
         [/(\d+) requests?/, "$1 次"],
+        [/Hi, ([^ ]+)! You were last verified as a on (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d+), (\d+). It is not necessary for you to reverify at this time. There may be a wait period between verification and access to academic benefits./, function(all, user, month, day, year){
+            var monthKey = {
+                "Jan": "1月",
+                "Feb": "2月",
+                "Mar": "3月",
+                "Apr": "4月",
+                "May": "5月",
+                "Jun": "6月",
+                "Jul": "7月",
+                "Aug": "8月",
+                "Sep": "9月",
+                "Oct": "10月",
+                "Nov": "11月",
+                "Dec": "12月"
+            };
+            return '您好，' + user + '！您最近于' + year + '年' + monthKey[month] + day + '日验证。您现在无需重新验证。从验证到享受学业福利之间可能会有一段等待时间。';
+    }],
         //[/Submitted (.+)/, "提交于 $1"],
+        [/(\d+) views?/, "$1 次观看"],
     ],
 };
