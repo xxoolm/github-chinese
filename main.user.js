@@ -111,7 +111,7 @@
             characterData: true,
             subtree: true,
             childList: true,
-            attributeFilter: ['value', 'placeholder', 'aria-label', 'data-confirm'], // 仅观察特定属性变化
+            attributeFilter: ['value', 'placeholder', 'aria-label', 'data-confirm', 'data-visible-text'], // 仅观察特定属性变化
         });
     }
 
