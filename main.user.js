@@ -163,6 +163,7 @@
 
                 case "SPAN":
                     transElement(node, 'title'); // title 属性
+                    if (/tooltipped/.test(node.className)) transElement(node, 'ariaLabel');
                     transElement(node.dataset, 'visibleText'); // 按钮提示
                     break;
 
