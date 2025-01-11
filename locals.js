@@ -5950,6 +5950,21 @@ I18N["zh-CN"]["settings/apps"] = { // 设置 - 开发者设置/GitHub 应用
                 "Are you sure you want to update permissions?": "您确定要更新权限吗？",
                     "Current users will be prompted to accept these changes and enable the new permissions on their installation.": "系统将提示当前用户接受这些更改，并在其安装中启用新权限。",
 
+        // 某个 GitHub 应用 - 助理 https://github.com/settings/apps/<app-name>/agent
+            "A Copilot configuration allows your GitHub App to integrate with Copilot. Learn more about building GitHub Copilot Extensions in the": "Copilot 配置允许您的 GitHub 应用与 Copilot 集成。了解更多关于构建 GitHub Copilot 扩展的信息，请访问",
+            "documentation": "文档",
+
+            "Accept the Marketplace Developer agreement to create your Copilot Extension": "接受市场开发者协议以创建您的 Copilot 扩展",
+                "By clicking \"Accept Terms\" below, you agree to the": "点击下面的 “接受条款”，即表示您同意以下条款",
+                "GitHub Copilot Extension Developer Policy": "GitHub Copilot 扩展开发者政策",
+                "Pre-release License terms": "预发布许可条款",
+                "on behalf of": "代表",
+                ". Please check to make sure that you are agreeing to these terms on behalf of the correct account.": "。请检查以确保您代表正确的帐户同意这些条款。",
+                "Accept Terms": "接受条款",
+
+            "To enable Copilot functionality, you must first accept the Marketplace Developer agreement": "要启用 Copilot 功能，您必须首先接受市场开发者协议",
+            "To enable Copilot functionality, you must first grant your app permission to read Copilot Messages. To do so, navigate to Permissions & Events > Account Permissions > Read-only for Copilot Chat": "要启用 Copilot 功能，必须先授予应用读取 Copilot 消息的权限。为此，请导航至权限和事件 > 帐户权限 > Copilot 聊天 - 只读",
+
         // 某个 GitHub 应用 - 安装 https://github.com/settings/apps/<app-name>/installations
             // [/Install (.*)/, "安装 $1"],
             // [/Choose an account to install (.*) on:/, "选择要安装 $1 的账户："],
