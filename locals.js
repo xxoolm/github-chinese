@@ -21278,14 +21278,14 @@ I18N["zh-CN"]["orgs/settings/personal-access-token"] = { // 组织设置 - 个�
     "static": { // 静态翻译
         ...I18N["zh-CN"]["orgs-settings-menu"]["static"],
 
-        // 个人访问令牌 /organizations/<org-login>/settings/personal-access-tokens-onboarding
-            "Restrict access via fine-grained personal access tokens": "通过精细化的个人访问令牌限制访问。",
+        // 个人访问令牌 - 精细化令牌 /organizations/<org-login>/settings/personal-access-tokens
+            "Fine-grained tokens": "精细化令牌",
+            "Fine-grained personal access tokens": "精细化的个人访问令牌",
                 "By default, fine-grained personal access tokens cannot access content owned by your organization via the Public API or Git. This includes both public and private resources such as repositories.": "默认情况下，精细化的个人访问令牌不能通过公共 API 或 Git 访问您组织拥有的内容。这包括公共和私人资源，如仓库。",
                 "Allow access via fine-grained personal access tokens": "允许通过细化的个人访问令牌进行访问",
                     "API and Git access will be allowed using approved organization member's fine-grained personal access tokens": "API 和 Git 访问将被允许使用经批准的组织成员的精细化个人访问令牌",
                 "Restrict access via fine-grained personal access tokens": "通过精细化的个人访问令牌限制访问。",
                     "Organization members will not be allowed to access your organization using a fine-grained personal access token": "不允许组织成员使用精细化的个人访问令牌访问您的组织",
-            "Continue": "继续",
 
             "Require approval of fine-grained personal access tokens": "要求批准精细化的个人访问令牌",
                 "Access requests by organization members can be subject to review by administrator before approval.": "组织成员的访问请求在批准之前可能需要经过管理员审查。",
@@ -21293,31 +21293,37 @@ I18N["zh-CN"]["orgs/settings/personal-access-token"] = { // 组织设置 - 个�
                     "All access requests by organization members to this organization must be approved before the token is usable.": "组织成员对该组织的所有访问请求都必须在令牌可用之前得到批准。",
                 "Do not require administrator approval": "不需要管理员批准",
                     "Tokens requested for this organization will work immediately, and organization members are not required to provide a justification when creating the token.": "为该组织申请的令牌将立即生效，并且组织成员在创建令牌时无需提供理由。",
-            "Restrict access via personal access tokens (classic)": "通过个人访问令牌限制访问（经典）",
+
+            "Set maximum lifetimes for personal access tokens": "设置个人访问令牌的最长使用期限",
+                "Control the maximum lifetime for fine-grained personal access tokens in your organizations. If set, your organization members can only use fine-grained personal access tokens against your resources if the tokens are set to expire within the period you provide.": "控制组织中精细化个人访问令牌的最长使用期限。如果设置了，您的组织成员只能在您提供的期限内对您的资源使用精细化个人访问令牌。",
+                "Learn more about token expiration policies.": "了解更多关于令牌过期策略的信息。",
+
+            "Fine-grained personal access tokens must expire": "精细化个人访问令牌必须过期",
+                "Select a maximum lifetime for fine-grained personal access tokens to be allowed to access your organizations.": "选择允许访问组织的精细化个人访问令牌的最长有效期。",
+                // 有效期 下拉菜单
+                    "7 days": "7 天",
+                    "30 days": "30 天",
+                    "60 days": "60 天",
+                    "90 days": "90 天",
+                    "366 days": "366 天",
+                    "Custom...": "自定义...",
+
+                    "days": "天",
+                    "between 1 and 366 days": "1 至 366 天之间",
+
+        // 个人访问令牌 - 令牌（经典）/organizations/<org-login>/settings/personal-access-tokens?tab=classic
+            "Tokens (classic)": "令牌（经典）",
+            "Restrict personal access tokens (classic) from accessing your organizations": "限制个人访问令牌（经典）访问您的组织",
                 "By default, personal access tokens (classic) can access content owned by your organization via the GitHub API or Git over HTTPS. This includes both public and private resources such as repositories.": "默认情况下，个人访问令牌（经典）可以通过 GitHub API 或基于 HTTPS 的 Git 访问您组织拥有的内容。这包括公共和私有资源，例如仓库。",
                 "Allow access via personal access tokens (classic)": "允许通过个人访问令牌进行访问（经典）",
                     "API and Git access will be allowed using an organization member's personal access token (classic)": "允许组织成员使用个人访问令牌（经典）访问 API 和 Git。",
                 "Restrict access via personal access tokens (classic)": "通过个人访问令牌限制访问（经典）",
                     "Organization members will not be allowed to access your organization using a personal access token (classic)": "不允许组织成员使用个人访问令牌（经典）访问您的组织",
 
-                "Enroll your organization": "注册您的组织",
-                    "You've selected the following options. If these don't look correct, you can go back through your previous choices before enrolling. These options can be configured at any time on the settings page.": "您已选择以下选项。如果这些看起来不正确，您可以在注册之前返回之前的选择。这些选项可以随时在设置页面上进行配置。",
-                "Enroll": "注册",
-                "Done": "完成",
-                    "Your organization has been configured": "您的组织已配置",
-                    "Click \"Continue\" to move on.": "点击 “继续”，继续。",
-
-                "Fine-grained personal access tokens": "精细化的个人访问令牌",
-                "Personal access token (classic)": "个人访问令牌（经典）",
-
-                "Are you sure you want to update your selection?": "您确定要更新您的选择吗？",
-                // 顶部提醒
-                    "Personal access tokens are now able to access your organization.": "个人访问令牌能够访问您的组织。",
-                    "Personal access tokens are no longer able to access your organization.": "个人访问令牌不再能够访问您的组织。",
-                    "All organization fine-grained personal access token requests are now subject to administrator review.": "所有组织精细化的个人访问令牌请求现在都要经过管理员的审查。",
-                    "All fine-grained personal access tokens requested for this organization will work immediately": "为该组织申请的所有精细化的个人访问令牌将立即生效。",
-                    "Personal access tokens (classic) are now able to access your organization.": "个人访问令牌（经典）现在能够访问您的组织。",
-                    "Personal access tokens (classic) are no longer able to access your organization.": "个人访问令牌（经典）不再能够访问您的组织。",
+            // 设置个人访问令牌的最长使用期限
+                "Control the maximum lifetime for personal access tokens (classic) in your organizations. If set, your organization members can only use personal access tokens (classic) against your resources if the tokens are set to expire within the period you provide.": "控制组织中个人访问令牌（经典）的最长使用期限。如果设置了，您的组织成员只能在您提供的期限内对您的资源使用个人访问令牌（经典）。",
+                "Personal access tokens (classic) must expire": "个人访问令牌（经典）必须过期",
+                    "Select a maximum lifetime for personal access tokens (classic) to be allowed to access your organizations.": "选择允许访问组织的个人访问令牌（经典）的最长使用期限。",
 
         // 活跃的令牌  /organizations/<org-login>/settings/personal-access-tokens/active
             "Filter active fine-grained tokens": "筛选活跃的精细化令牌",
@@ -21325,6 +21331,7 @@ I18N["zh-CN"]["orgs/settings/personal-access-token"] = { // 组织设置 - 个�
             "Owner": "所有者",
                 "Filter by owner": "按所有者筛选",
                 "Filter users": "筛选用户",
+                "Clear": "清除",
 
             // "Repository": "仓库",
                 "Filter by repository": "按仓库筛选",
@@ -21336,6 +21343,7 @@ I18N["zh-CN"]["orgs/settings/personal-access-token"] = { // 组织设置 - 个�
                     "read": "只读",
                     "write": "可写",
                     "Administration": "管理员",
+                    "Attestations": "证书",
                     "Code scanning alerts": "代码扫描警报",
                     "Codespaces lifecycle admin": "代码空间生命周期管理员",
                     "Codespaces metadata": "代码空间元数据",
@@ -21355,17 +21363,20 @@ I18N["zh-CN"]["orgs/settings/personal-access-token"] = { // 组织设置 - 个�
                     "Variables": "变量",
                     "Workflows": "工作流程",
                     "Organization": "组织",
+                        "API Insights": "API 透视",
                         "Blocking users": "拉黑用户",
                         "Custom organization roles": "自定义组织角色",
                         "Custom repository roles": "自定义仓库角色",
                         "Events": "活动",
                         "GitHub Copilot Business": "GitHub Copilot 商业版",
+                        "Knowledge bases": "知识库",
                         "Members": "成员",
                         "Organization announcement banners": "组织公告横幅",
                         "Organization codespaces": "组织代码空间",
                         "Organization codespaces secrets": "组织代码空间机密",
                         "Organization codespaces settings": "组织代码空间设置",
                         "Organization dependabot secrets": "组织 Dependabot 机密",
+                        "Organization private registries": "组织私有注册表",
                         "Plan": "计划",
                         "Self-hosted runners": "自托管运行器",
 
