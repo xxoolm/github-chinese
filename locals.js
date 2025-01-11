@@ -51,7 +51,7 @@ I18N.conf = {
     rePagePathRepo: /^\/[^\/]+\/[^\/]+\/(issues|pulls|pull|tree|watchers|stargazers|new|edit|delete|upload|find|wiki|branches|discussions|activity|rules|releases|packages|tags|labels|milestones|compare|commit|blob|blame|actions(\/metrics\/(usage|performance))?|runs|deployments|security|pulse|community|forks|fork|import|graphs\/(contributors|community|traffic|commit-activity|code-frequency)|network$|network\/(dependencies|dependents|updates|members)|settings\/(access|code_review_limits|interaction_limits|branches|branch_protection_rules|tag_protection|rules|actions|hooks|environments|codespaces|pages|security_analysis|dependabot_rules|keys|secrets|variables|installations|notifications|key_links)|settings|transfer|projects\/new|pkgs|contribute|subscription|invitations|codespaces|attestations|custom-properties)/,
 
     // 组织路径
-    rePagePathOrg: /^\/[^\/]+\/[^\/]+\/(repositories\/new|invitation|repositories|sponsoring|discussions|projects|packages|teams|new-team|people|outside-collaborators|pending_collaborators|dashboard|billing_managers\/new|settings\/(profile|billing|roles|member_privileges|teams|import-export|blocked_users|interaction_limits|code_review_limits|moderators|repository-defaults|rules|codespaces|copilot|actions|hooks|discussions|packages|pages|projects|security_analysis|security|dependabot_rules|domains|secrets|variables|oauth_application_policy|installations|personal-access-token|reminders|sponsors-log|audit-log|deleted_repositories|applications\/new|applications|apps\/new|apps|publisher)|topics|domain\/new|audit-log\/event_settings|billing\/(history|plans)|policies\/applications)|^\/[^\/]+\/(enterprise_plan|sponsoring)/,
+    rePagePathOrg: /^\/[^\/]+\/[^\/]+\/(repositories\/new|repositories|sponsoring|discussions|projects|packages|teams|new-team|people|outside-collaborators|pending_collaborators|dashboard|billing_managers\/new|invitations?|settings\/(profile|billing|roles|member_privileges|teams|import-export|blocked_users|interaction_limits|code_review_limits|moderators|repository-defaults|rules|codespaces|copilot|actions|hooks|discussions|packages|pages|projects|security_analysis|security|dependabot_rules|domains|secrets|variables|oauth_application_policy|installations|personal-access-token|reminders|sponsors-log|audit-log|deleted_repositories|applications\/new|applications|apps\/new|apps|publisher)|topics|domain\/new|audit-log\/event_settings|billing\/(history|plans)|policies\/applications)|^\/[^\/]+\/(enterprise_plan|sponsoring)/,
 
     // 特定页面，启用`字符数据`监测
     characterDataPage: ['repository/new', 'repository/edit', 'new', 'new/import', 'orgs/repositories/new', 'repository/blob'],
@@ -19635,6 +19635,8 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
         // 待定邀请 https://github.com/orgs/<orgs-name>/people/pending_invitations
             // 顶部提醒
                 // [/You've invited ([^ ]+) to ([^ ]+)! They'll be receiving an email shortly. They can also visit ([^ ]+) to accept the invitation./, "您已邀请 $1 加入到 $2 ！他们很快就会收到一封电子邮件。他们还可以访问 $3 接受邀请。"],
+                // [/You've successfully updated ([^ ]+)'s invitation./, "您已成功更新 $1 的邀请。"],
+                // [/You've canceled (\d+) invitations? from ([^ ]+). It may take a few minutes to process./, "您已经取消了来自 $2 的 $1 个邀请。可能需要几分钟处理。"],
 
             "Find an invitation…": "搜索邀请…",
 
@@ -19655,6 +19657,8 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
 
             "Edit invitation": "编辑邀请",
             "Cancel invitation": "取消邀请",
+                // [/Cancel invitation from ([^ ]+)/, "取消来自 $1 的邀请"],
+                "The following invitations will be canceled:": "以下邀请将被取消：",
 
         // 失败邀请 https://github.com/orgs/<orgs-name>/people/failed_invitations
             // [/(\d+) Failed invitations?/, "个失败邀请"],
@@ -19667,7 +19671,6 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
     "regexp": [ // 正则翻译
         [/(\d+) teams?/, "$1 团队"],
         [/(\d+) roles?/, "$1 角色"],
-        [/(\d+) invitations?/, "$1 邀请"],
         [/(\d+) Failed invitations?/, "$1 失败邀请"],
         [/Invite a member to/, "邀请成员加入"],
         [/Convert ([^ ]+) to outside collaborator?/, "将 $1 转换为外部协作者？"],
@@ -19675,6 +19678,10 @@ I18N["zh-CN"]["orgs/people"] = { // 组织 - 成员标签卡
         [/(\d+) pe(?:ople|rson) in the ([^ ]+) organization/, "$2 组织中的 $1 位成员"],
         [/(\d+) security managers? in the ([^ ]+) organization/, "$2 组织中的 $1 位安全管理员"],
         [/You've invited ([^ ]+) to ([^ ]+)! They'll be receiving an email shortly. They can also visit ([^ ]+) to accept the invitation./, "您已邀请 $1 加入到 $2 ！他们很快就会收到一封电子邮件。他们还可以访问 $3 接受邀请。"],
+        [/You've successfully updated ([^ ]+)'s invitation./, "您已成功更新 $1 的邀请。"],
+        [/Cancel invitation from ([^ ]+)/, "取消来自 $1 的邀请"],
+        [/You've canceled (\d+) invitations? from ([^ ]+). It may take a few minutes to process./, "您已经取消了来自 $2 的 $1 个邀请。可能需要几分钟处理。"],
+        [/(\d+) invitations?/, "$1 邀请"],
         [/Invited on (.+)/, (match, p1) => {
             const dateRegExp = I18N["zh-CN"]["public"]["time-regexp"];
             const translatedDate = dateRegExp.reduce((acc, [pattern, replacement]) => acc.replace(pattern, replacement), p1);
@@ -19740,8 +19747,79 @@ I18N["zh-CN"]["orgs/teams"] = { // 组织 - 团队标签卡
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
 };
+I18N["zh-CN"]["orgs/new-team"]= I18N["zh-CN"]["orgs/teams"];
 
-I18N["zh-CN"]["orgs/new-team"]= I18N["zh-CN"]["orgs/teams"]
+I18N["zh-CN"]["orgs/invitations"] = { // 组织 - 邀请页面
+    "static": { // 静态翻译
+        ...I18N["zh-CN"]["orgs-public"]["static"],
+
+        // 邀请 https://github.com/orgs/<orgs-name>/invitations/<user-name>/edit
+            // [/Invite ([^ ]+) to ([^ ]+)/, "邀请 $1 加入 $2 组织"],
+            "Give them an appropriate role in the organization and add them to some teams to give access to repositories.": "在组织中赋予他们适当的角色，并将他们添加到一些团队中，以便让他们访问仓库。",
+            "Role in the organization": "在组织中的角色",
+                "Member": "成员",
+                    "Members can see all other members, and can be granted access to repositories. They can also create new teams and repositories.": "成员可以看到所有其他成员，并可被授予访问仓库的权限。他们还可以创建新团队和仓库。",
+                "Owner": "所有者",
+                    "Owners have full administrative rights to the organization and have complete access to all repositories and teams.": "所有者拥有组织的全部管理权限，可以完全访问所有仓库和团队。",
+            "Send invitation": "发送邀请",
+
+        // 编辑模式
+            // [/Edit ([^ ]+)’s invitation to ([^ ]+)/, "编辑 $2 对 $1 的邀请"],
+            "Originally invited by": "最初由",
+            // [/. As an owner, you can give ([^ ]+) a different role and pick different teams for them./, "邀请。作为所有者，您可以赋予 $1 不同的角色，并为他们挑选不同的团队。"],
+            "Cancel invitation": "取消邀请",
+            "Update invitation": "更新邀请",
+
+        // 已通过邀请
+            // [/Invite a member to ([^ ]+)/, "邀请会员加入 $1"],
+            "Sorry,": "抱歉!",
+            // [/is already a member of ([^ ]+)./, "已经是 $1 的成员。"],
+
+    },
+    "regexp": [ // 正则翻译
+        [/Invite ([^ ]+) to ([^ ]+)/, "邀请 $1 加入 $2"],
+        [/invitation to ([^ ]+)/, "关于组织 $1 的邀请"],
+        [/. As an owner, you can give ([^ ]+) a different role and pick different teams for them./, "邀请。作为所有者，您可以赋予 $1 不同的角色，并为他们挑选不同的团队。"],
+        [/Invite a member to ([^ ]+)/, "邀请会员加入 $1"],
+        [/is already a member of ([^ ]+)./, "已经是 $1 的成员。"],
+    ],
+};
+
+I18N["zh-CN"]["orgs/invitation"] = { // 组织 - 接受邀请页面
+    "static": {
+
+        // 接受邀请 https://github.com/<orgs-name>/invitation
+            "You’ve been invited to the": "您被邀请加入",
+                "organization!": "组织！",
+
+            "Invited by": "邀请者：",
+
+            // [/Join ([^ ]+)/, "加入 $1"],
+            "Decline": "拒绝",
+
+            // [/of ([^ ]+) may be able to see:/, "$1 将可以查看："],
+            // 组织权限
+                "If you have": "您的",
+                    "two-factor authentication": "双重身份验证（2FA）",
+                    "enabled or not": "是否启用",
+                "Your public profile information": "您的公开信息",
+                "Certain activity": "某些活动",
+                    "within this organization": "在该组织内",
+                "Country of request origin": "请求来源国家/地区",
+                "Your access level to repositories within the organization": "您对组织内仓库的访问级别",
+                "Your IP address": "您的 IP 地址",
+
+            "Opt out": "拒绝",
+                "of future invitations from this organization.": "该组织未来的邀请。",
+            "of future invitations from this organization.": "该组织未来的邀请。",
+
+    },
+    "regexp": [
+        [/Join ([^ ]+)/, "加入 $1"],
+        [/of ([^ ]+) may be able to see:/, "$1 将可以查看："],
+        ...I18N["zh-CN"]["orgs-public"]["regexp"],
+    ],
+};
 
 I18N["zh-CN"]["orgs/domain/new"] = { // 组织 - 添加域名
     "static": { // 静态翻译
@@ -22756,35 +22834,6 @@ I18N["zh-CN"]["orgs/sponsoring"] = { // https://github.com/orgs/<org-name>/spons
         ...I18N["zh-CN"]["orgs-public"]["regexp"],
     ],
 };
-I18N["zh-CN"]["orgs/invitation"] = {
-    "static": {
-        "You’ve been invited to the": "您被邀请加入",
-            "organization!": "组织！",
-
-        "Invited by": "邀请者：",
-
-        "Decline": "拒绝",
-
-        // 组织权限
-            "If you have": "您的",
-                "two-factor authentication": "双重身份验证（2FA）",
-                "enabled or not": "是否启用",
-            "Your public profile information": "您的公开信息",
-            "Certain activity": "某些活动",
-                "within this organization": "在该组织内",
-            "Country of request origin": "请求来源国家/地区",
-            "Your access level to repositories within the organization": "您对组织内仓库的访问级别",
-            "Your IP address": "您的 IP 地址",
-        
-        "Opt out": "拒绝",
-            "of future invitations from this organization.": "该组织未来的邀请。",
-    },
-    "regexp": [
-        [/Join ([^ ]+)/, "加入 $1"],
-        [/of ([^ ]+) may be able to see:/, "$1 将可以查看："],
-        ...I18N["zh-CN"]["orgs-public"]["regexp"],
-    ],
-};
 
 I18N["zh-CN"]["organizations/plan"] = {
     "static": {
@@ -22798,9 +22847,9 @@ I18N["zh-CN"]["repository/actions/metrics/usage"] = { // 仓库 - 洞察 - 操�
         ...I18N["zh-CN"]["repository-public"]["static"],
         ...I18N["zh-CN"]["repository-insights-menu"]["static"],
 
-        "Period": "周期",
-            "Current week (Mon-Sun)": "本周（周一 ~ 周日）",
-            "Current month": "本月",
+            "Period": "周期",
+                "Current week (Mon-Sun)": "本周（周一 ~ 周日）",
+                "Current month": "本月",
             "Last month": "上个月",
             "Last 30 days": "最近 30 天",
             "Last 90 days": "最近 90 天",
