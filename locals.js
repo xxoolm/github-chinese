@@ -19971,8 +19971,9 @@ I18N["zh-CN"]["orgs/settings/roles"] = { // 组织设置 - 仓库角色
         ...I18N["zh-CN"]["orgs-settings-menu"]["static"],
 
         // 仓库角色 /organizations/<org-login>/settings/roles
-            "Roles are used to grant access and permissions for teams and members. In addition to the available pre-defined roles, you can create up to 0 custom roles to fit your needs.": "角色是用来为团队和成员授予访问和权限的。除了可用的预定义角色外，您可以创建多达 0 个自定义角色以满足您的需求。",
-                "Learn more about custom repository roles": "了解更多关于自定义仓库角色的信息",
+            // "Roles are used to grant access and permissions for teams and members. In addition to the available pre-defined roles, you can create up to 0 custom roles to fit your needs.": "角色是用来为团队和成员授予访问和权限的。除了可用的预定义角色外，您可以创建多达 0 个自定义角色以满足您的需求。",
+            //     "Learn more about custom repository roles": "了解更多关于自定义仓库角色的信息",
+            "Roles are used to grant access and permissions for teams and members.": "角色是用来为团队和成员授予访问和权限的。",
             "Pre-defined roles": "预定义角色",
                 "You can": "您可",
                 "set the base role": "设置基础角色",
@@ -19992,7 +19993,7 @@ I18N["zh-CN"]["orgs/settings/roles"] = { // 组织设置 - 仓库角色
             "Custom roles": "自定义角色",
                 "Create a role": "创建角色",
                 "Create custom roles with GitHub Enterprise": "使用 GitHub 企业版创建自定义角色",
-                    "Enterprise accounts offer organizations more granular control over permissions by allowing you to configure up to three custom repository roles. This enables greater control over who and how your users access code and data in your organization.": "企业账户允许配置最多三个自定义仓库角色，从而为企业提供更细粒度的权限控制。这样就能更好地控制组织内用户访问代码和数据。",
+                    "Enterprise accounts offer organizations more granular control over permissions by allowing you to configure up to five custom repository roles. This enables greater control over who and how your users access code and data in your organization.": "企业账户允许配置最多五个自定义仓库角色，从而为企业提供更细粒度的权限控制。这样就能更好地控制组织内用户访问代码和数据。",
                 "Try GitHub Enterprise": "试用 GitHub 企业版",
 
     },
