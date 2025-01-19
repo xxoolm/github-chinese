@@ -18782,6 +18782,7 @@ I18N["zh-CN"]["account/upgrade"] = { // 账户
 
         "Payment frequency": "支付频率",
             "Total amount": "总计",
+            "Due today": "今天到期",
 
         "Billing information": "账单信息",
             "Personal account": "个人账户",
@@ -18791,6 +18792,41 @@ I18N["zh-CN"]["account/upgrade"] = { // 账户
         "By clicking “Change your account's billing cycle”, you agree to our": "通过点击“更改计费周期”，您同意我们的",
         "Terms of Service": "服务条款",
         ". We’ll occasionally send you account-related emails.": "我们会偶尔发送与账户相关的电子邮件。",
+
+        // https://github.com/account/upgrade?plan=pro&source=account+compare+plans
+            "Upgrade your account from GitHub Free to GitHub Pro": "从 GitHub 免费版升级到 GitHub 专业版",
+            "Plan details": "计划详情",
+
+            // "Billing information": "账单信息",
+            "Please confirm your billing details to continue. You only need to do this once.": "请确认您的账单详情以继续。您只需确认一次。",
+            // "Personal account": "个人账户",
+
+            "First name": "名字",
+                "First name can't be blank.": "名字不能为空。",
+                "First name can't be blank": "名字不能为空",
+            "Last name": "姓氏",
+                "Last name can't be blank.": "姓氏不能为空。",
+                "Last name can't be blank": "姓氏不能为空",
+            "Address": "地址",
+            "(Street, P.O. box)": "（街道，邮政信箱）",
+                "Address can't be blank.": "地址不能为空。",
+                "Address can't be blank": "地址不能为空",
+            "Address line 2": "地址第 2 行",
+            "(Apartment, suite, unit)": "（公寓、套房、单元）",
+            "City": "城市",
+                "City can't be blank.": "城市不能为空。",
+                "City can't be blank": "城市不能为空",
+            "Country/Region": "国家/地区",
+                "Country code can't be blank.": "国家/地区不能为空。",
+                "Country code can't be blank": "国家/地区不能为空",
+                "Choose your country": "选择您所在的国家/地区",
+            "State/Province": "州/省",
+                "Required for certain countries": "某些国家/地区需要",
+            "Postal/Zip code": "邮政编码",
+                "(9-digit zip code for US)": "(美国为 9 位邮政编码）",
+            "VAT/GST ID": "增值税/消费税编号",
+
+            "Save and continue": "保存并继续",
     },
     "regexp": [
         [/Payment due (.+)/, (match, p1) => {
