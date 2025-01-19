@@ -19056,6 +19056,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
             "Free for both open source and private projects": "对开源和私人项目免费",
             "Unlimited private repositories": "无限制私有项目",
             "Free Trial": "免费试用",
+            "Pay-as-you-go": "即用即付",
 
             "User": "用户",
             "in this plan": "在计划中",
@@ -19066,6 +19067,7 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
             "Try free for 14 days": "免费试用 14 天",
 
             "Buy with GitHub": "通过 GitHub 购买",
+            // [/Set up with ([^ ]+)/, "使用 $1 设置"],
             "Next: Confirm your installation location": "下一步：确认您的安装位置",
             "and payment information": "和支付信息",
 
@@ -19074,8 +19076,12 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
             "terms of service": "服务条款",
             "privacy policy": "隐私政策",
             ", and": "，和",
-            // "support documentation": "支持文档",
+            "support documentation": "支持文档",
             "support contact": "支持联络",
+
+            // [/By clicking Set up with (.*), you agree to (.*)’s/, "单击 “使用 $1 设置”，即表示您同意 $1 的以下条款"],
+            "You previously agreed to the": "您之前已同意",
+            "Marketplace Terms of Service": "市场服务协议",
 
         // 应用的审查、编辑订单 第二页 https://github.com/marketplace/<app-name>/order/<order-id>?account=<account-name>
         // 个人 应用示例: https://github.com/marketplace/travis-ci/order/MDIyOk1hcmtldHBsYWNlTGlzdGluZ1BsYW43MA==?account=maboloshi
@@ -19103,12 +19109,6 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
             "Billing information": "账单信息",
             "Please confirm your billing details to continue. You only need to do this once.": "请确认您的账单详情以继续。您只需确认一次。",
             "Personal account": "个人账户",
-            // "Terms of Service": "服务条款",
-            // "and the": "和",
-            // "Privacy Policy": "隐私政策",
-            // ". You previously agreed to the": "。您已同意过",
-            // "Marketplace Terms of Service.": "市场服务条款。",
-            // "Issue plan changes": "议题计划更改",
 
             "First name": "名字",
                 "First name can't be blank.": "名字不能为空。",
@@ -19370,6 +19370,8 @@ I18N["zh-CN"]["marketplace"] = { // GitHub 市场
         [/plan has been deleted./, "计划已被删除。"],
 
         [/Use (v\d+)/, "使用 $1"], // 操作介绍页面 右上角绿色按钮
+        [/Set up with (.*)/, "使用 $1 设置"], // 应用介绍页面
+        [/By clicking Set up with (.*), you agree to (.*)’s/, "单击 “使用 $1 设置”，即表示您同意 $1 的以下条款"], // 应用介绍页面
         // /marketplace/travis-ci/order/MDIyOk1hcmtldHBsYWNlTGlzdGluZ1BsYW43MA==?account=maboloshi
         [/Prorated for/, "按比例计算"],
 
