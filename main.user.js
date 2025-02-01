@@ -268,9 +268,9 @@
             // 3. 个人资料页
             case isProfile:
                 const tabParam = new URLSearchParams(url.search).get('tab');
-                pageType = pathname.includes('/stars') ? 'profile/stars'
-                         : tabParam ? `profile/${tabParam}`
-                         : 'profile';
+                pageType = pathname.includes('/stars') ? 'page-profile/stars'
+                         : tabParam ? `page-profile/${tabParam}`
+                         : 'page-profile';
                 break;
 
             // 4. 首页/仪表盘
