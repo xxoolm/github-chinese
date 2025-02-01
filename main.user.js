@@ -30,6 +30,13 @@
     const lang = 'zh-CN'; // 设置默认语言
     const FeatureSet = {
         enable_RegExp: GM_getValue("enable_RegExp", true),
+        enable_transDesc: GM_getValue("enable_transDesc", true),
+    };
+    const CONFIG = {
+        DESC_SELECTORS: {
+            repository: ".f4.my-3",
+            gist: ".gist-content [itemprop='about']"
+        },
     };
 
     let page = false,
@@ -39,8 +46,7 @@
         ignoreSelectors = [],
         tranSelectors = [],
         regexpRules = [];
-    
-    let enable_XunfeiTranslation = GM_getValue("enable_XunfeiTranslation", true); // 初始化讯飞听见翻译为开启状态
+
     function updateConfig(page) {
         if (cachedPage !== page && page) {
             cachedPage = page;
@@ -451,29 +457,61 @@
      * registerMenuCommand 函数：注册菜单。
      */
     function registerMenuCommand() {
-        const toggleRegExp = () => {
-            enable_RegExp = !enable_RegExp;
-            GM_setValue("enable_RegExp", enable_RegExp);
-            GM_notification(`已${enable_RegExp ? '开启' : '关闭'}正则功能`);
-            if (enable_RegExp) {
-                location.reload();
-            }
-            GM_unregisterMenuCommand(id);
-            id = GM_registerMenuCommand(`${enable_RegExp ? '关闭' : '开启'}正则功能`, toggleRegExp);
+        const createMenuCommand = (config) => {
+            const { label, key, callback } = config;
+            let menuId;
+
+            const getMenuLabel = (label, isEnabled) =>
+                `${isEnabled ? "禁用" : "启用"} ${label}`;
+
+            const toggle = () => {
+                const newFeatureState = !FeatureSet[key];
+                GM_setValue(key, newFeatureState);
+                FeatureSet[key] = newFeatureState;
+                GM_notification(`${label}已${newFeatureState ? '启用' : '禁用'}`);
+
+                // 调用回调函数
+                if (callback) callback(newFeatureState);
+
+                // 更新菜单命令的标签
+                GM_unregisterMenuCommand(menuId);
+                menuId = GM_registerMenuCommand(
+                    getMenuLabel(label, newFeatureState),
+                    toggle
+                );
+            };
+
+            // 初始注册菜单命令
+            menuId = GM_registerMenuCommand(
+                getMenuLabel(label, FeatureSet[key]),
+                toggle
+            );
         };
 
-        const toggleXunfeiTranslation = () => {
-            enable_XunfeiTranslation = !enable_XunfeiTranslation;
-            GM_setValue("enable_XunfeiTranslation", enable_XunfeiTranslation);
-            GM_notification(`已${enable_XunfeiTranslation ? '开启' : '关闭'}讯飞听见翻译`);
-            // 这里可以添加一些额外的逻辑，比如根据开关状态更新页面等
-            GM_unregisterMenuCommand(xunfeiId);
-            xunfeiId = GM_registerMenuCommand(`${enable_XunfeiTranslation ? '关闭' : '开启'}讯飞听见翻译`, toggleXunfeiTranslation);
-        };
-        let id = GM_registerMenuCommand(`${enable_RegExp ? '关闭' : '开启'}正则功能`, toggleRegExp);
-        // 注册新的菜单命令，用于控制讯飞听见翻译的开关
-        let xunfeiId = GM_registerMenuCommand(`${enable_XunfeiTranslation ? '关闭' : '开启'}讯飞听见翻译`, toggleXunfeiTranslation);
-    }
+        const menuConfigs = [
+            {
+                label: "正则功能",
+                key: "enable_RegExp",
+                callback: (newFeatureState) => {
+                    if (newFeatureState) traverseNode(document.body);
+                }
+            },
+            {
+                label: "描述翻译",
+                key: "enable_transDesc",
+                callback: (newFeatureState) => {
+                    if (newFeatureState && CONFIG.DESC_SELECTORS[page]) {
+                        transDesc(CONFIG.DESC_SELECTORS[page]);
+                    } else {
+                        document.getElementById('translate-me')?.remove();
+                    }
+                }
+            }
+        ];
+
+        // 注册所有菜单项
+        menuConfigs.forEach(config => createMenuCommand(config));
+    };
 
     /**
      * init 函数：初始化翻译功能。
@@ -503,14 +541,13 @@
 
     // 监听 Turbo 完成事件
     document.addEventListener('turbo:load', () => {
-        if (page) {
-            transTitle(); // 翻译页面标题
-            transBySelector();
-            if (page === "repository") { //仓库简介翻译
-                transDesc(".f4.my-3");
-            } else if (page === "gist") { // Gist 简介翻译
-                transDesc(".gist-content [itemprop='about']");
-            }
+        if (!page) return;
+
+        transTitle(); // 翻译页面标题
+        transBySelector();
+
+        if (FeatureSet.enable_transDesc && CONFIG.DESC_SELECTORS[page]) {
+            transDesc(CONFIG.DESC_SELECTORS[page]);
         }
     });
 
