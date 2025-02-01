@@ -28,8 +28,11 @@
     'use strict';
 
     const lang = 'zh-CN'; // 设置默认语言
-    let enable_RegExp = GM_getValue("enable_RegExp", 1),
-        page = false,
+    const FeatureSet = {
+        enable_RegExp: GM_getValue("enable_RegExp", true),
+    };
+
+    let page = false,
         cachedPage = null,
         characterData = null,
         ignoreMutationSelectors = [],
@@ -341,7 +344,7 @@
         }
 
         // 正则翻译
-        if (enable_RegExp) {
+        if (FeatureSet.enable_RegExp) {
             for (let [a, b] of regexpRules) {
                 translatedText = text.replace(a, b);
                 if (translatedText !== text) {
