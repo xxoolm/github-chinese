@@ -371,7 +371,7 @@
         const element = document.querySelector(selector);
 
         // 如果元素不存在 或者 translate-me 元素已存在，那么直接返回
-        if (!element || !enable_XunfeiTranslation||document.getElementById('translate-me')) return false;
+        if (!element || document.getElementById('translate-me')) return false;
 
         // 在元素后面插入一个翻译按钮
         const buttonHTML = `<div id='translate-me' style='color: rgb(27, 149, 224); font-size: small; cursor: pointer'>翻译</div>`;
